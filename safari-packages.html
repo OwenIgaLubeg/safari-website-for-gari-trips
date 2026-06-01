@@ -24,6 +24,206 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="./assets/images/favicon.ico.png" type="image/x-icon">
+    <style>
+
+        /* ==========================
+   SAFARI PACKAGES SECTION
+========================== */
+
+.packages-section{
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title{
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.section-title h2{
+    font-size: 42px;
+    font-weight: 700;
+    color: #1b4332;
+    margin-bottom: 20px;
+}
+
+.section-title p{
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* GRID */
+
+.packages-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 35px;
+}
+
+/* CARD */
+
+.package-card{
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+
+.package-card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENT */
+
+.package-content{
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* PRICE TAG */
+
+.price-tag{
+    display: inline-block;
+    background: #4BAF47;
+    color: white;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+/* TITLE */
+
+.package-content h3{
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* FEATURES */
+
+.package-content ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.package-content ul li{
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.package-content ul li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4BAF47;
+    font-weight: bold;
+}
+
+/* BUTTON */
+
+.package-btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #4BAF47;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+    margin-top: auto;
+    text-align: center;
+}
+
+.package-btn:hover{
+    background: rgba(136, 160, 60, 0.82);
+    transform: scale(1.03);
+}
+
+/* CONTAINER SPACING */
+
+.packages-section .container{
+    width: 92%;
+    max-width: 1350px;
+    margin: auto;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .packages-section{
+        padding: 60px 0;
+    }
+
+    .section-title h2{
+        font-size: 32px;
+    }
+
+    .section-title p{
+        font-size: 16px;
+    }
+
+    .package-card img{
+        height: 220px;
+    }
+
+    .package-content{
+        padding: 22px;
+    }
+
+    .package-content h3{
+        font-size: 21px;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media(max-width:480px){
+
+    .packages-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2{
+        font-size: 28px;
+    }
+
+    .package-card img{
+        height: 200px;
+    }
+
+    .package-btn{
+        width: 100%;
+    }
+}</style>
 
 </head>
 
@@ -75,12 +275,9 @@
                                        height="103"
                                        xlink:href="./assets/images/favicon.ico.png" />
                             </defs>
-
                         </svg>
                     </a>
                 </div>
-                <!-- header logo end  -->
-                <!-- social icons start  -->
                 <div class="socialIcons">
                     <ul>
                         <li>
@@ -105,11 +302,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- social icons end  -->
-
-                <!-- nav boxes start  -->
                 <div class="navBoxes">
-                    <!-- nav box first start -->
                     <div class="navBox">
                         <div class="iconSvg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
@@ -123,9 +316,7 @@
                             <h3>+256 704 018 220</h3>
                         </div>
                     </div>
-                    <!-- nav box first end -->
 
-                    <!-- nav box second start -->
                     <div class="navBox">
                         <div class="iconSvg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 29" fill="none">
@@ -139,9 +330,7 @@
                             <h3>info@garitripsuganda.com</h3>
                         </div>
                     </div>
-                    <!-- nav box second end -->
-
-                    <!-- nav box third start  -->
+             >
                     <div class="navBox3">
                         <div class="iconSvg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 25 35" fill="none">
@@ -155,11 +344,9 @@
                             <h3>(opp. Boston Int sch)</h3>
                         </div>
                     </div>
-                    <!-- nav box third end  -->
-                </div>
-                <!-- nav boxes end  -->
 
-                <!-- sidebar section start  -->
+                </div>
+
                 <aside class="sidebar">
                     <div class="logo">
                         <img src="./assets/images/favicon.ico.png" alt="logo" style="width: 200%; height: auto;" />
@@ -174,11 +361,7 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </aside>
-                <!-- sidebar section end  -->
             </div>
-            <!-- first header end  -->
-
-            <!-- second header start  -->
             <div class="headAgriosSecond">
                 <div class="navItems">
                     <ul>
@@ -194,121 +377,255 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
-            <!-- second header end  -->
         </div>
-        <!-- main container end  -->
     </nav>
 </header>
-<!-- header section end  -->
 
-    <main>
-        <div class="aboutBackground">
-            <div class="container">
-                <p>HOME &nbsp; / &nbsp; Safari Packages</p>
-                <h1>Experience Uganda Like Never Before</h1>
-            </div>
-        </div>
+<main>
 
-        <!-- news grid container start  -->
+    <!-- HERO SECTION KEPT INTACT -->
+    <div class="aboutBackground">
         <div class="container">
-            <div class="newsGridContainer">
-                <h3>Uganda Safari Packages</h3><br>
-                <h3>Explore our most popular safari packages designed to give you the best of Uganda’s wildlife, landscapes, and culture.</h3>
-
-                <div class="newsGridBoxes">
-                    <!-- blogs box item first start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/semuliki-leopards.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>10-Day Uganda Wildlife & Gorilla Safari</h3>
-                        <p>From $2,850 per person</p>
-                        <ul>Gorilla trekking in Bwindi Impenetrable Forest <br>Game drives in Queen Elizabeth National Park <br>
-                            Chimpanzee tracking </ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                    <!-- blogs box item first end  -->
-                    <!-- blogs box item second start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/gari-trips-visitors-11.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>5-Day Murchison Falls Safari</h3>
-                        <p>From $850 per person </p>
-                        <ul>⦁ Big game viewing <br>⦁ Nile boat cruise <br>
-                            ⦁ Top of the falls </ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                    <!-- blogs box item second end  -->
-                    <!-- blogs box item third start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/destination-4.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>3-Day Gorilla Trekking Safari</h3>
-                        <p>From $1,250 per person </p>
-                        <ul>⦁ Gorilla permit included <br>⦁ Guided trek<br>
-                            ⦁ Scenic drives</ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- blogs boxes section one end  -->
-                <!-- blogs boxes section two start  -->
-                <div class="newsGridBoxes">
-                    <!-- blogs box item first start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/hero3.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>6-Day Ultimate Uganda Wildlife & Primates Safari</h3>
-                        <p>From $4,950 per person </p>
-                        <ul>⦁ Walking safari in Lake Mburo National Park<br>⦁ Rhino tracking at Ziwa Rhino Sanctuary <br>
-                            ⦁ Cultural encounters and scenic road trips</ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                    <!-- blogs box item first end  -->
-                    <!-- blogs box item second start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/gal-13.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>8-Day Uganda Wildlife Safari</h3>
-                        <p>From $1,950 per person </p>
-                        <ul>⦁ Shoebill Tracking<br>⦁ Boat cruises on the Nile and Kazinga Channel <br>
-                            ⦁ Big Five safari experience  </ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                    <!-- blogs box item second end  -->
-                    <!-- blogs box item third start  -->
-                    <div class="newsGridBoxItem">
-                        <div class="newsGridImage">
-                            <img src="./assets/images/communities-pic-3.jpg" alt="News Grid Image">
-                        </div>
-                        <h3>24-Day Uganda Adventure & Gorilla Expedition</h3>
-                        <p>From $6,850 per person </p>
-                        <ul>⦁ Cultural encounters with communities <br>⦁ Hiking in Mount Moroto <br>
-                            ⦁ Sipi Falls and Mount Elgon region  </ul>
-                        <div class="newsGridButton">
-                            <a href="contact.html"><button class="newsGridBtn" type="button">👉 Request Itinerary</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p>HOME &nbsp; / &nbsp; Safari Packages</p>
+            <h1>Experience Uganda Like Never Before</h1>
         </div>
-    </main>
+    </div>
 
+    <!-- PACKAGES SECTION -->
+    <section class="packages-section">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Uganda Safari Packages</h2>
+                <p>
+                    Explore hand-crafted safari experiences across Uganda —
+                    from gorilla trekking adventures to wildlife expeditions,
+                    cultural tours, and biking safaris.
+                </p>
+            </div>
+
+            <div class="packages-grid">
+
+                <!-- Card -->
+                <div class="package-card">
+                    <img src="./assets/images/semuliki-leopards.jpg">
+
+                    <div class="package-content">
+                        <span class="price-tag">From $2,850</span>
+
+                        <h3>10-Day Uganda Wildlife & Gorilla Safari</h3>
+
+                        <ul>
+                            <li>Gorilla trekking in Bwindi</li>
+                            <li>Queen Elizabeth game drives</li>
+                            <li>Chimpanzee tracking</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+                    </div>
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/gari-murchison-falls.jpg">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $850</span>
+
+                        <h3>5-Day Murchison Falls Safari</h3>
+
+                        <ul>
+                            <li>Big game viewing</li>
+                            <li>Nile boat cruise</li>
+                            <li>Top of the falls visit</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/gari-gorilla-1.JPG">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $1,250</span>
+
+                        <h3>3-Day Gorilla Trekking Safari</h3>
+
+                        <ul>
+                            <li>Permit included</li>
+                            <li>Guided trekking</li>
+                            <li>Scenic road drives</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/hero3.jpg">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $4,950</span>
+
+                        <h3>6-Day Ultimate Wildlife Safari</h3>
+
+                        <ul>
+                            <li>Lake Mburo walking safari</li>
+                            <li>Rhino tracking</li>
+                            <li>Cultural encounters</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/gal-13.jpg">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $1,950</span>
+
+                        <h3>8-Day Uganda Wildlife Safari</h3>
+
+                        <ul>
+                            <li>Shoebill tracking</li>
+                            <li>Boat cruises</li>
+                            <li>Big Five experience</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/communities-pic-3.jpg">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $6,850</span>
+
+                        <h3>24-Day Adventure Expedition</h3>
+
+                        <ul>
+                            <li>Community experiences</li>
+                            <li>Mount Moroto hiking</li>
+                            <li>Sipi Falls adventure</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/kampala-city.jpg">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $50</span>
+
+                        <h3>City Tour Safari</h3>
+
+                        <ul>
+                            <li>Museum visits</li>
+                            <li>Martyrs shrines</li>
+                            <li>Kasubi Tombs</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/aboutBgImg22.png">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $850</span>
+
+                        <h3>Bike Safari</h3>
+
+                        <ul>
+                            <li>Ride across parks</li>
+                            <li>Wildlife encounters</li>
+                            <li>Adventure routes</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="package-card">
+
+                    <img src="./assets/images/gari-rhinos.JPG">
+
+                    <div class="package-content">
+
+                        <span class="price-tag">From $250</span>
+
+                        <h3>Ziwa Rhino Sanctuary</h3>
+
+                        <ul>
+                            <li>Rhino tracking</li>
+                            <li>Nature walks</li>
+                            <li>Photography spots</li>
+                        </ul>
+
+                        <a href="contact.html" class="package-btn">
+                            Request Itinerary
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
 <!-- footer section start -->
 <footer>
     <!-- footer container start  -->
@@ -370,87 +687,50 @@
                 </div>
             </div>
             <div class="footerColumns">
-                <h3>Explore</h3>
+                <h3>Quick Links</h3>
                 <ul>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                            <path
-                                    d="M11.1152 0.185547C11.0632 0.0683594 10.9753 0.00651073 10.8516 0C10.7279 -0.00651073 10.6335 0.0488281 10.5684 0.166016C10.4186 0.426433 10.2396 0.664062 10.0312 0.878906C9.82292 1.08724 9.59342 1.26628 9.34277 1.41602C9.09212 1.56575 8.82357 1.67969 8.53711 1.75781C8.25065 1.83594 7.95117 1.875 7.63867 1.875H6.07617C5.56185 1.875 5.07682 1.97266 4.62109 2.16797C4.16536 2.36328 3.7666 2.63184 3.4248 2.97363C3.08301 3.31543 2.81445 3.71419 2.61914 4.16992C2.42383 4.61914 2.32617 5.10417 2.32617 5.625C2.32617 5.6901 2.32943 5.75684 2.33594 5.8252C2.34245 5.89355 2.34896 5.96029 2.35547 6.02539C2.66797 5.80404 3.01628 5.59245 3.40039 5.39062C3.77799 5.1888 4.19792 5.01302 4.66016 4.86328C5.1224 4.71354 5.62695 4.59635 6.17383 4.51172C6.7207 4.42057 7.31315 4.375 7.95117 4.375C8.03581 4.375 8.10905 4.40592 8.1709 4.46777C8.23275 4.52962 8.26367 4.60286 8.26367 4.6875C8.26367 4.77214 8.23275 4.84538 8.1709 4.90723C8.10905 4.96908 8.03581 5 7.95117 5C6.7207 5 5.66276 5.16276 4.77734 5.48828C3.89193 5.8138 3.15137 6.19954 2.55566 6.64551C1.95996 7.09147 1.49609 7.54883 1.16406 8.01758C0.838542 8.48633 0.617188 8.86068 0.5 9.14062C0.434896 9.29688 0.434896 9.45475 0.5 9.61426C0.565104 9.77376 0.679036 9.88607 0.841797 9.95117C0.998047 10.0163 1.15592 10.0163 1.31543 9.95117C1.47493 9.88607 1.58724 9.77539 1.65234 9.61914C1.67188 9.58008 1.78743 9.37826 1.99902 9.01367C2.21061 8.64909 2.5638 8.25846 3.05859 7.8418C3.22135 8.05664 3.41341 8.26497 3.63477 8.4668C3.86263 8.66862 4.12142 8.84115 4.41113 8.98438C4.70085 9.1276 5.01823 9.23503 5.36328 9.30664C5.70833 9.37826 6.07943 9.39453 6.47656 9.35547C7.24479 9.29688 7.94792 9.0918 8.58594 8.74023C9.22396 8.38867 9.77409 7.92969 10.2363 7.36328C10.6986 6.79688 11.0599 6.13932 11.3203 5.39062C11.5742 4.64844 11.7012 3.85742 11.7012 3.01758C11.7012 2.52279 11.6507 2.03125 11.5498 1.54297C11.4489 1.05469 11.304 0.602214 11.1152 0.185547Z"
-                                    fill="#A5A49A" />
-                        </svg><a href="about.html"><span>About us</span></a>
+                       <a href="about.html"><span>About us</span></a>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                            <path
-                                    d="M11.1152 0.185547C11.0632 0.0683594 10.9753 0.00651073 10.8516 0C10.7279 -0.00651073 10.6335 0.0488281 10.5684 0.166016C10.4186 0.426433 10.2396 0.664062 10.0312 0.878906C9.82292 1.08724 9.59342 1.26628 9.34277 1.41602C9.09212 1.56575 8.82357 1.67969 8.53711 1.75781C8.25065 1.83594 7.95117 1.875 7.63867 1.875H6.07617C5.56185 1.875 5.07682 1.97266 4.62109 2.16797C4.16536 2.36328 3.7666 2.63184 3.4248 2.97363C3.08301 3.31543 2.81445 3.71419 2.61914 4.16992C2.42383 4.61914 2.32617 5.10417 2.32617 5.625C2.32617 5.6901 2.32943 5.75684 2.33594 5.8252C2.34245 5.89355 2.34896 5.96029 2.35547 6.02539C2.66797 5.80404 3.01628 5.59245 3.40039 5.39062C3.77799 5.1888 4.19792 5.01302 4.66016 4.86328C5.1224 4.71354 5.62695 4.59635 6.17383 4.51172C6.7207 4.42057 7.31315 4.375 7.95117 4.375C8.03581 4.375 8.10905 4.40592 8.1709 4.46777C8.23275 4.52962 8.26367 4.60286 8.26367 4.6875C8.26367 4.77214 8.23275 4.84538 8.1709 4.90723C8.10905 4.96908 8.03581 5 7.95117 5C6.7207 5 5.66276 5.16276 4.77734 5.48828C3.89193 5.8138 3.15137 6.19954 2.55566 6.64551C1.95996 7.09147 1.49609 7.54883 1.16406 8.01758C0.838542 8.48633 0.617188 8.86068 0.5 9.14062C0.434896 9.29688 0.434896 9.45475 0.5 9.61426C0.565104 9.77376 0.679036 9.88607 0.841797 9.95117C0.998047 10.0163 1.15592 10.0163 1.31543 9.95117C1.47493 9.88607 1.58724 9.77539 1.65234 9.61914C1.67188 9.58008 1.78743 9.37826 1.99902 9.01367C2.21061 8.64909 2.5638 8.25846 3.05859 7.8418C3.22135 8.05664 3.41341 8.26497 3.63477 8.4668C3.86263 8.66862 4.12142 8.84115 4.41113 8.98438C4.70085 9.1276 5.01823 9.23503 5.36328 9.30664C5.70833 9.37826 6.07943 9.39453 6.47656 9.35547C7.24479 9.29688 7.94792 9.0918 8.58594 8.74023C9.22396 8.38867 9.77409 7.92969 10.2363 7.36328C10.6986 6.79688 11.0599 6.13932 11.3203 5.39062C11.5742 4.64844 11.7012 3.85742 11.7012 3.01758C11.7012 2.52279 11.6507 2.03125 11.5498 1.54297C11.4489 1.05469 11.304 0.602214 11.1152 0.185547Z"
-                                    fill="#A5A49A" />
-                        </svg><a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                      <a href="safari-packages.html"><span>Safari Packages</span></a></li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                            <path
-                                    d="M11.1152 0.185547C11.0632 0.0683594 10.9753 0.00651073 10.8516 0C10.7279 -0.00651073 10.6335 0.0488281 10.5684 0.166016C10.4186 0.426433 10.2396 0.664062 10.0312 0.878906C9.82292 1.08724 9.59342 1.26628 9.34277 1.41602C9.09212 1.56575 8.82357 1.67969 8.53711 1.75781C8.25065 1.83594 7.95117 1.875 7.63867 1.875H6.07617C5.56185 1.875 5.07682 1.97266 4.62109 2.16797C4.16536 2.36328 3.7666 2.63184 3.4248 2.97363C3.08301 3.31543 2.81445 3.71419 2.61914 4.16992C2.42383 4.61914 2.32617 5.10417 2.32617 5.625C2.32617 5.6901 2.32943 5.75684 2.33594 5.8252C2.34245 5.89355 2.34896 5.96029 2.35547 6.02539C2.66797 5.80404 3.01628 5.59245 3.40039 5.39062C3.77799 5.1888 4.19792 5.01302 4.66016 4.86328C5.1224 4.71354 5.62695 4.59635 6.17383 4.51172C6.7207 4.42057 7.31315 4.375 7.95117 4.375C8.03581 4.375 8.10905 4.40592 8.1709 4.46777C8.23275 4.52962 8.26367 4.60286 8.26367 4.6875C8.26367 4.77214 8.23275 4.84538 8.1709 4.90723C8.10905 4.96908 8.03581 5 7.95117 5C6.7207 5 5.66276 5.16276 4.77734 5.48828C3.89193 5.8138 3.15137 6.19954 2.55566 6.64551C1.95996 7.09147 1.49609 7.54883 1.16406 8.01758C0.838542 8.48633 0.617188 8.86068 0.5 9.14062C0.434896 9.29688 0.434896 9.45475 0.5 9.61426C0.565104 9.77376 0.679036 9.88607 0.841797 9.95117C0.998047 10.0163 1.15592 10.0163 1.31543 9.95117C1.47493 9.88607 1.58724 9.77539 1.65234 9.61914C1.67188 9.58008 1.78743 9.37826 1.99902 9.01367C2.21061 8.64909 2.5638 8.25846 3.05859 7.8418C3.22135 8.05664 3.41341 8.26497 3.63477 8.4668C3.86263 8.66862 4.12142 8.84115 4.41113 8.98438C4.70085 9.1276 5.01823 9.23503 5.36328 9.30664C5.70833 9.37826 6.07943 9.39453 6.47656 9.35547C7.24479 9.29688 7.94792 9.0918 8.58594 8.74023C9.22396 8.38867 9.77409 7.92969 10.2363 7.36328C10.6986 6.79688 11.0599 6.13932 11.3203 5.39062C11.5742 4.64844 11.7012 3.85742 11.7012 3.01758C11.7012 2.52279 11.6507 2.03125 11.5498 1.54297C11.4489 1.05469 11.304 0.602214 11.1152 0.185547Z"
-                                    fill="#A5A49A" />
-                        </svg><a href="contact.html"><span>Contact us</span></a></li>
+                      <a href="contact.html"><span>Contact us</span></a></li>
 
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                            <path
-                                    d="M11.1152 0.185547C11.0632 0.0683594 10.9753 0.00651073 10.8516 0C10.7279 -0.00651073 10.6335 0.0488281 10.5684 0.166016C10.4186 0.426433 10.2396 0.664062 10.0312 0.878906C9.82292 1.08724 9.59342 1.26628 9.34277 1.41602C9.09212 1.56575 8.82357 1.67969 8.53711 1.75781C8.25065 1.83594 7.95117 1.875 7.63867 1.875H6.07617C5.56185 1.875 5.07682 1.97266 4.62109 2.16797C4.16536 2.36328 3.7666 2.63184 3.4248 2.97363C3.08301 3.31543 2.81445 3.71419 2.61914 4.16992C2.42383 4.61914 2.32617 5.10417 2.32617 5.625C2.32617 5.6901 2.32943 5.75684 2.33594 5.8252C2.34245 5.89355 2.34896 5.96029 2.35547 6.02539C2.66797 5.80404 3.01628 5.59245 3.40039 5.39062C3.77799 5.1888 4.19792 5.01302 4.66016 4.86328C5.1224 4.71354 5.62695 4.59635 6.17383 4.51172C6.7207 4.42057 7.31315 4.375 7.95117 4.375C8.03581 4.375 8.10905 4.40592 8.1709 4.46777C8.23275 4.52962 8.26367 4.60286 8.26367 4.6875C8.26367 4.77214 8.23275 4.84538 8.1709 4.90723C8.10905 4.96908 8.03581 5 7.95117 5C6.7207 5 5.66276 5.16276 4.77734 5.48828C3.89193 5.8138 3.15137 6.19954 2.55566 6.64551C1.95996 7.09147 1.49609 7.54883 1.16406 8.01758C0.838542 8.48633 0.617188 8.86068 0.5 9.14062C0.434896 9.29688 0.434896 9.45475 0.5 9.61426C0.565104 9.77376 0.679036 9.88607 0.841797 9.95117C0.998047 10.0163 1.15592 10.0163 1.31543 9.95117C1.47493 9.88607 1.58724 9.77539 1.65234 9.61914C1.67188 9.58008 1.78743 9.37826 1.99902 9.01367C2.21061 8.64909 2.5638 8.25846 3.05859 7.8418C3.22135 8.05664 3.41341 8.26497 3.63477 8.4668C3.86263 8.66862 4.12142 8.84115 4.41113 8.98438C4.70085 9.1276 5.01823 9.23503 5.36328 9.30664C5.70833 9.37826 6.07943 9.39453 6.47656 9.35547C7.24479 9.29688 7.94792 9.0918 8.58594 8.74023C9.22396 8.38867 9.77409 7.92969 10.2363 7.36328C10.6986 6.79688 11.0599 6.13932 11.3203 5.39062C11.5742 4.64844 11.7012 3.85742 11.7012 3.01758C11.7012 2.52279 11.6507 2.03125 11.5498 1.54297C11.4489 1.05469 11.304 0.602214 11.1152 0.185547Z"
-                                    fill="#A5A49A" />
-                        </svg><a href="index.html"><span>Home page</span></a></li>
+                      <a href="index.html"><span>Home page</span></a></li>
                 </ul>
             </div>
             <div class="footerColumns">
                 <h3>Gari Trips offers;</h3>
                 <ul class="footerColText">
-                    <li class="colorWhite"><a href="gorilla-trekking.html">⦁	Gorilla trekking </a></li>
-                    <li class="colorYellow"><a href="bird-watching.html">⦁	Bird Watching </a></li>
-                    <li class="colorWhite"><a href="accomodation.html">⦁	 Accommodation </a></li>
-                    <li class="colorYellow"><a href="car-hire-services.html">⦁	Car hire services</a></li>
+                    <li class="colorWhite"><a href="gorilla-trekking.html">⦁ Gorilla trekking </a></li>
+                    <li class="colorYellow"><a href="bird-watching.html">⦁ Bird Watching </a></li>
+                    <li class="colorWhite"><a href="accomodation.html">⦁ Accommodation </a></li>
+                    <li class="colorYellow"><a href="car-hire-services.html">⦁ Car hire services</a></li>
+                    <li class="colorWhite"><a href="cultural-engagements.html">⦁ Community Engaements</a></li>
+                    <li class="colorYellow"><a href="bike-safari.html">⦁ Bike Safaris</a></li>
                 </ul>
             </div>
             <div class="footerColumns">
                 <h3>Contact</h3>
                 <ul>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                            <path
-                                    d="M14.5654 11.4629C14.5654 11.6387 14.5303 11.873 14.46 12.166C14.3896 12.459 14.3193 12.6875 14.249 12.8516C14.1084 13.1914 13.6982 13.5488 13.0186 13.9238C12.3857 14.2637 11.7646 14.4336 11.1553 14.4336C10.9678 14.4336 10.792 14.4219 10.6279 14.3984C10.4521 14.375 10.2588 14.334 10.0479 14.2754C9.83691 14.2051 9.67871 14.1523 9.57324 14.1172C9.46777 14.082 9.28027 14.0176 9.01074 13.9238C8.74121 13.8184 8.57715 13.7539 8.51855 13.7305C7.8623 13.4961 7.27637 13.2207 6.76074 12.9043C5.91699 12.377 5.03223 11.6504 4.10645 10.7246C3.19238 9.81055 2.47168 8.93164 1.94434 8.08789C1.61621 7.57227 1.33496 6.98633 1.10059 6.33008C1.08887 6.25977 1.03027 6.0957 0.924805 5.83789C0.831055 5.56836 0.760742 5.38086 0.713867 5.27539C0.678711 5.16992 0.631836 5.01172 0.573242 4.80078C0.514648 4.58984 0.473633 4.39648 0.450195 4.2207C0.426758 4.04492 0.415039 3.86914 0.415039 3.69336C0.415039 3.07227 0.584961 2.45117 0.924805 1.83008C1.2998 1.15039 1.65723 0.740234 1.99707 0.599609C2.16113 0.529297 2.38965 0.458984 2.68262 0.388672C2.97559 0.318359 3.20996 0.283203 3.38574 0.283203C3.47949 0.283203 3.5498 0.294922 3.59668 0.318359C3.71387 0.353516 3.88965 0.605469 4.12402 1.07422C4.20605 1.20312 4.31152 1.38477 4.44043 1.61914C4.55762 1.85352 4.6748 2.06445 4.79199 2.25195C4.89746 2.45117 4.99707 2.63281 5.09082 2.79688C5.11426 2.82031 5.17285 2.90234 5.2666 3.04297C5.37207 3.18359 5.44824 3.30664 5.49512 3.41211C5.54199 3.50586 5.56543 3.59961 5.56543 3.69336C5.56543 3.82227 5.46582 3.98633 5.2666 4.18555C5.0791 4.39648 4.87402 4.58398 4.65137 4.74805C4.42871 4.91211 4.21777 5.08789 4.01855 5.27539C3.83105 5.46289 3.7373 5.61523 3.7373 5.73242C3.7373 5.80273 3.75488 5.87891 3.79004 5.96094C3.8252 6.05469 3.85449 6.125 3.87793 6.17188C3.90137 6.21875 3.94824 6.30078 4.01855 6.41797C4.08887 6.52344 4.12402 6.58789 4.12402 6.61133C4.63965 7.52539 5.22559 8.31055 5.88184 8.9668C6.53809 9.62305 7.32324 10.2031 8.2373 10.707C8.24902 10.7188 8.31348 10.7598 8.43066 10.8301C8.54785 10.9004 8.62988 10.9473 8.67676 10.9707C8.72363 10.9941 8.78809 11.0234 8.87012 11.0586C8.96387 11.0938 9.04004 11.1113 9.09863 11.1113C9.22754 11.1113 9.38574 11.0117 9.57324 10.8125C9.76074 10.625 9.93652 10.4199 10.1006 10.1973C10.2646 9.97461 10.4463 9.76367 10.6455 9.56445C10.8447 9.37695 11.0146 9.2832 11.1553 9.2832C11.249 9.2832 11.3428 9.30664 11.4365 9.35352C11.5303 9.40039 11.6475 9.4707 11.7881 9.56445C11.9287 9.66992 12.0166 9.72852 12.0518 9.74023C12.2158 9.8457 12.3916 9.95117 12.5791 10.0566C12.7783 10.1621 12.9951 10.2793 13.2295 10.4082C13.4639 10.5371 13.6396 10.6367 13.7568 10.707C14.2256 10.9414 14.4834 11.123 14.5303 11.252C14.5537 11.2988 14.5654 11.3691 14.5654 11.4629Z"
-                                    fill="#EEC044" />
-                        </svg> <span>+256 704 018 220 / +256 772392152</span>
+                     <span>+256 704 018 220 / +256 772392152</span>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
-                            <path
-                                    d="M14.2207 4.22266C14.2663 4.17708 14.321 4.17025 14.3848 4.20215C14.4486 4.23405 14.4805 4.2819 14.4805 4.3457V9.9375C14.4805 10.3021 14.3529 10.612 14.0977 10.8672C13.8424 11.1224 13.5326 11.25 13.168 11.25H1.79297C1.42839 11.25 1.11849 11.1224 0.863281 10.8672C0.608073 10.612 0.480469 10.3021 0.480469 9.9375V4.3457C0.480469 4.2819 0.510091 4.23405 0.569336 4.20215C0.628581 4.17025 0.685547 4.17708 0.740234 4.22266C1.05013 4.45964 1.48307 4.7832 2.03906 5.19336C2.59505 5.60352 3.57031 6.31445 4.96484 7.32617C5.2474 7.53581 5.61654 7.80697 6.07227 8.13965C6.52799 8.47233 6.9974 8.63411 7.48047 8.625C7.97266 8.63411 8.44661 8.47005 8.90234 8.13281C9.35807 7.79557 9.72721 7.52669 10.0098 7.32617C11.4043 6.31445 12.3773 5.60352 12.9287 5.19336C13.4801 4.7832 13.9108 4.45964 14.2207 4.22266ZM7.48047 7.75C7.16146 7.75911 6.80371 7.61328 6.40723 7.3125C6.01074 7.01172 5.69857 6.7793 5.4707 6.61523C3.6569 5.30273 2.51758 4.47103 2.05273 4.12012C1.58789 3.76921 1.14583 3.42969 0.726562 3.10156C0.653646 3.03776 0.594401 2.96029 0.548828 2.86914C0.503255 2.778 0.480469 2.68229 0.480469 2.58203V2.0625C0.480469 1.69792 0.608073 1.38802 0.863281 1.13281C1.11849 0.877604 1.42839 0.75 1.79297 0.75H13.168C13.5326 0.75 13.8424 0.877604 14.0977 1.13281C14.3529 1.38802 14.4805 1.69792 14.4805 2.0625V2.58203C14.4805 2.68229 14.4577 2.778 14.4121 2.86914C14.3665 2.96029 14.3073 3.03776 14.2344 3.10156C13.8151 3.42969 13.373 3.76921 12.9082 4.12012C12.4434 4.47103 11.304 5.30273 9.49023 6.61523C9.26237 6.7793 8.9502 7.01172 8.55371 7.3125C8.15723 7.61328 7.79948 7.75911 7.48047 7.75Z"
-                                    fill="#EEC044" />
-                        </svg><span>info@garitripsuganda.com</span>
+                      <span>info@garitripsuganda.com</span>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 13 16" fill="none">
-                            <path
-                                    d="M6.48047 0C5.65755 0 4.88151 0.15625 4.15234 0.46875C3.42318 0.78125 2.78516 1.21094 2.23828 1.75781C1.69141 2.30469 1.26172 2.94271 0.949219 3.67188C0.636719 4.40104 0.480469 5.17708 0.480469 6C0.480469 7.10417 0.772135 8.23438 1.35547 9.39062C1.92839 10.5365 2.56901 11.5833 3.27734 12.5312C3.98568 13.4792 4.64193 14.2656 5.24609 14.8906C5.86068 15.5156 6.19401 15.8542 6.24609 15.9062C6.27734 15.9375 6.3138 15.9609 6.35547 15.9766C6.39714 15.9922 6.4388 16 6.48047 16C6.52214 16 6.5638 15.9922 6.60547 15.9766C6.64714 15.9609 6.68359 15.9375 6.71484 15.9062C6.76693 15.8542 7.10026 15.5156 7.71484 14.8906C8.31901 14.2656 8.97526 13.4792 9.68359 12.5312C10.3919 11.5833 11.0326 10.5365 11.6055 9.39062C12.1888 8.23438 12.4805 7.10417 12.4805 6C12.4805 5.17708 12.3242 4.40104 12.0117 3.67188C11.6992 2.94271 11.2695 2.30469 10.7227 1.75781C10.1758 1.21094 9.53776 0.78125 8.80859 0.46875C8.07943 0.15625 7.30339 0 6.48047 0ZM6.48047 9.32812C6.02214 9.32812 5.58984 9.24479 5.18359 9.07812C4.77734 8.90104 4.42318 8.66146 4.12109 8.35938C3.81901 8.05729 3.57943 7.70312 3.40234 7.29688C3.23568 6.89062 3.15234 6.45833 3.15234 6C3.15234 5.54167 3.23568 5.10938 3.40234 4.70312C3.57943 4.29688 3.81901 3.94271 4.12109 3.64062C4.42318 3.33854 4.77734 3.09896 5.18359 2.92188C5.58984 2.75521 6.02214 2.67188 6.48047 2.67188C6.9388 2.67188 7.37109 2.75521 7.77734 2.92188C8.18359 3.09896 8.53776 3.33854 8.83984 3.64062C9.14193 3.94271 9.38151 4.29688 9.55859 4.70312C9.72526 5.10938 9.80859 5.54167 9.80859 6C9.80859 6.45833 9.72526 6.89062 9.55859 7.29688C9.38151 7.70312 9.14193 8.05729 8.83984 8.35938C8.53776 8.66146 8.18359 8.90104 7.77734 9.07812C7.37109 9.24479 6.9388 9.32812 6.48047 9.32812Z"
-                                    fill="#EEC044" />
-                        </svg>
                         <span>Gari Trips House - Kansanga kiwafu</span>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 13 16" fill="none">
-                            <path
-                                    d="M6.48047 0C5.65755 0 4.88151 0.15625 4.15234 0.46875C3.42318 0.78125 2.78516 1.21094 2.23828 1.75781C1.69141 2.30469 1.26172 2.94271 0.949219 3.67188C0.636719 4.40104 0.480469 5.17708 0.480469 6C0.480469 7.10417 0.772135 8.23438 1.35547 9.39062C1.92839 10.5365 2.56901 11.5833 3.27734 12.5312C3.98568 13.4792 4.64193 14.2656 5.24609 14.8906C5.86068 15.5156 6.19401 15.8542 6.24609 15.9062C6.27734 15.9375 6.3138 15.9609 6.35547 15.9766C6.39714 15.9922 6.4388 16 6.48047 16C6.52214 16 6.5638 15.9922 6.60547 15.9766C6.64714 15.9609 6.68359 15.9375 6.71484 15.9062C6.76693 15.8542 7.10026 15.5156 7.71484 14.8906C8.31901 14.2656 8.97526 13.4792 9.68359 12.5312C10.3919 11.5833 11.0326 10.5365 11.6055 9.39062C12.1888 8.23438 12.4805 7.10417 12.4805 6C12.4805 5.17708 12.3242 4.40104 12.0117 3.67188C11.6992 2.94271 11.2695 2.30469 10.7227 1.75781C10.1758 1.21094 9.53776 0.78125 8.80859 0.46875C8.07943 0.15625 7.30339 0 6.48047 0ZM6.48047 9.32812C6.02214 9.32812 5.58984 9.24479 5.18359 9.07812C4.77734 8.90104 4.42318 8.66146 4.12109 8.35938C3.81901 8.05729 3.57943 7.70312 3.40234 7.29688C3.23568 6.89062 3.15234 6.45833 3.15234 6C3.15234 5.54167 3.23568 5.10938 3.40234 4.70312C3.57943 4.29688 3.81901 3.94271 4.12109 3.64062C4.42318 3.33854 4.77734 3.09896 5.18359 2.92188C5.58984 2.75521 6.02214 2.67188 6.48047 2.67188C6.9388 2.67188 7.37109 2.75521 7.77734 2.92188C8.18359 3.09896 8.53776 3.33854 8.83984 3.64062C9.14193 3.94271 9.38151 4.29688 9.55859 4.70312C9.72526 5.10938 9.80859 5.54167 9.80859 6C9.80859 6.45833 9.72526 6.89062 9.55859 7.29688C9.38151 7.70312 9.14193 8.05729 8.83984 8.35938C8.53776 8.66146 8.18359 8.90104 7.77734 9.07812C7.37109 9.24479 6.9388 9.32812 6.48047 9.32812Z"
-                                    fill="#EEC044" />
-                        </svg><span>opposite Boston International school.</span>
+                  <span>opposite Boston International school.</span>
                     </li>
                 </ul>
                 <form class="footerForm">
                     <div class="inputContainer">
                         <input type="email" placeholder="Enter your email" required>
-                        <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13"
-                             fill="none">
-                            <path
-                                    d="M12.3011 0.789146C12.3715 0.836054 12.4223 0.896643 12.4536 0.970913C12.4848 1.04518 12.4927 1.12532 12.477 1.21131L10.7649 11.5075C10.7571 11.57 10.7336 11.6267 10.6945 11.6775C10.6554 11.7283 10.6085 11.7733 10.5538 11.8124C10.5225 11.828 10.4893 11.8397 10.4541 11.8475C10.419 11.8554 10.3818 11.8593 10.3427 11.8593C10.3193 11.8593 10.2939 11.8573 10.2665 11.8534C10.2391 11.8495 10.2098 11.8397 10.1786 11.8241L7.15303 10.5928L5.52301 12.5629C5.48392 12.6176 5.43505 12.6567 5.37642 12.6802C5.31779 12.7036 5.2572 12.7153 5.19465 12.7153C5.1712 12.7153 5.14775 12.7134 5.12429 12.7095C5.10084 12.7056 5.07739 12.6997 5.05393 12.6919C4.96794 12.6606 4.89953 12.6078 4.84871 12.5336C4.7979 12.4593 4.77249 12.3792 4.77249 12.2932V9.9478L10.5538 2.85307L3.40045 9.05656L0.750186 7.96597C0.672007 7.93469 0.609464 7.88583 0.562557 7.81938C0.515649 7.75293 0.488287 7.68061 0.480469 7.60243C0.480469 7.51644 0.498059 7.43826 0.533239 7.3679C0.56842 7.29754 0.621191 7.24281 0.691552 7.20372L11.8438 0.765693C11.875 0.750057 11.9102 0.736376 11.9493 0.724649C11.9884 0.712922 12.0236 0.707059 12.0548 0.707059C12.1018 0.707059 12.1467 0.714877 12.1897 0.730513C12.2327 0.746148 12.2698 0.765693 12.3011 0.789146Z"
-                                    fill="white" />
-                        </svg>
                     </div>
                 </form>
             </div>
