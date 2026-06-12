@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Uganda Safari Packages & Itineraries  | Gari Trips Uganda</title>
+    <title>Homestay Experience in Uganda | Gari Trips Uganda</title>
+
 
     <meta name="description" content="Discover Uganda safari packages from budget to luxury. Gorilla trekking, wildlife tours, and custom itineraries available." />
     <meta name="keywords" content="Discover Uganda safari packages, from budget to luxury. Gorilla trekking, wildlife tours." />
     <meta name="author" content="Gari Trips Uganda" />
 
-    <meta property="og:title" content="Agricultural Services - Jalhab Mixed Farm" />
-    <meta property="og:description" content="Professional farming and livestock services in Uganda." />
-    <meta property="og:image" content="https://jalhabmixedfarm.com/assets/images/jalhab-logo.jpg" />
-    <meta property="og:url" content="https://jalhabmixedfarm.com/services.html" />
+    <meta property="og:title" content="Tourism and Hospitality - Gari Trips Uganda" />
+    <meta property="og:description" content="local expert tour guides, negotiatable prices, flexible safari packages in Uganda." />
+    <meta property="og:image" content="https://garitripsuganda.com/assets/images/gari-trips-logo-brown.png" />
+    <meta property="og:url" content="https://garitripsuganda.com/services.html" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="css/styles.css" />
@@ -26,208 +26,192 @@
     <link rel="shortcut icon" href="./assets/images/gari-trips-logo-brown.png" type="image/x-icon">
     <style>
 
-        /* ==========================
-   SAFARI PACKAGES SECTION
-========================== */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Bahnschrift,sans-serif;
+        }
 
-.packages-section{
-    padding: 80px 0;
-    background: #f8f9fa;
-}
+        body{
+            background:#f7f7f7;
+            line-height:1.7;
+            color:#333;
+        }
+        /*https://images.unsplash.com/photo-1516426122078-c23e76319801");-->
+        /* HERO */
 
-.section-title{
-    text-align: center;
-    max-width: 800px;
-    margin: auto;
-    margin-bottom: 60px;
-}
+        .hero{
+            height:80vh;
+            background:
+                    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+                    url("./assets/images/ter-crested-crane-1.jpg");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:20px;
+        }
 
-.section-title h2{
-    font-size: 42px;
-    font-weight: 700;
-    color: #1b4332;
-    margin-bottom: 20px;
-}
+        .hero-content h1{
+            font-size:55px;
+            color:white;
+            margin-bottom:20px;
+        }
 
-.section-title p{
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-}
+        .hero-content p{
+            color:white;
+            font-size:22px;
+            max-width:900px;
+        }
 
-/* GRID */
+        /* GENERAL */
 
-.packages-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap: 35px;
-}
+        .container{
+            width:90%;
+            max-width:1300px;
+            margin:auto;
+            padding:70px 0;
+        }
 
-/* CARD */
+        .section-title{
+            text-align:center;
+            font-size:38px;
+            margin-bottom:25px;
+            color:#1d6b33;
+        }
 
-.package-card{
-    background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    transition: 0.35s ease;
-    display: flex;
-    flex-direction: column;
-}
+        .intro{
+            text-align:center;
+            max-width:1000px;
+            margin:auto;
+            font-size:18px;
+        }
 
-.package-card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-}
+        /* CARDS */
 
-/* IMAGE */
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:25px;
+            margin-top:40px;
+        }
 
-.package-card img{
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-}
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,.12);
+            transition:.3s;
+        }
 
-/* CONTENT */
+        .card:hover{
+            transform:translateY(-8px);
+        }
 
-.package-content{
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+            border-radius:10px;
+            margin-bottom:20px;
+        }
 
-/* PRICE TAG */
+        .card h3{
+            margin-bottom:15px;
+            color:#1d6b33;
+        }
 
-.price-tag{
-    display: inline-block;
-    background: #4BAF47;
-    color: white;
-    font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 50px;
-    width: fit-content;
-    margin-bottom: 18px;
-    font-size: 15px;
-}
+        /* ITINERARY */
 
-/* TITLE */
+        .day-box{
+            background:white;
+            padding:35px;
+            margin-bottom:25px;
+            border-left:6px solid #1d6b33;
+            border-radius:10px;
+            box-shadow:0 3px 10px rgba(0,0,0,.1);
+        }
 
-.package-content h3{
-    font-size: 24px;
-    color: #222;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
+        .day-box h2{
+            margin-bottom:15px;
+        }
 
-/* FEATURES */
+        /* LIST */
 
-.package-content ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    margin-bottom: 30px;
-}
+        .list-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+            margin-top:30px;
+        }
 
-.package-content ul li{
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 14px;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
+        .list-box{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,.08);
+        }
 
-.package-content ul li::before{
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #4BAF47;
-    font-weight: bold;
-}
+        .list-box ul{
+            padding-left:20px;
+        }
 
-/* BUTTON */
+        .list-box li{
+            margin-bottom:10px;
+        }
 
-.package-btn{
-    display: inline-block;
-    text-decoration: none;
-    background: #4BAF47;
-    color: white;
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: .3s;
-    margin-top: auto;
-    text-align: center;
-}
+        /* CTA */
 
-.package-btn:hover{
-    background: rgba(136, 160, 60, 0.82);
-    transform: scale(1.03);
-}
+        .cta{
+            background:#1d6b33;
+            padding:80px 20px;
+            text-align:center;
+            color:white;
+        }
 
-/* CONTAINER SPACING */
+        .cta h2{
+            font-size:42px;
+            margin-bottom:20px;
+        }
 
-.packages-section .container{
-    width: 92%;
-    max-width: 1350px;
-    margin: auto;
-}
+        .cta a{
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 35px;
+            background:#ffc107;
+            text-decoration:none;
+            color:black;
+            font-weight:bold;
+            border-radius:40px;
+        }
 
-/* MOBILE */
+        /* RESPONSIVE */
 
-@media(max-width:768px){
+        @media(max-width:768px){
 
-    .packages-section{
-        padding: 60px 0;
-    }
+            .hero-content h1{
+                font-size:38px;
+            }
 
-    .section-title h2{
-        font-size: 32px;
-    }
+            .hero-content p{
+                font-size:18px;
+            }
 
-    .section-title p{
-        font-size: 16px;
-    }
+            .section-title{
+                font-size:30px;
+            }
 
-    .package-card img{
-        height: 220px;
-    }
+        }
 
-    .package-content{
-        padding: 22px;
-    }
-
-    .package-content h3{
-        font-size: 21px;
-    }
-}
-
-/* EXTRA SMALL DEVICES */
-
-@media(max-width:480px){
-
-    .packages-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .section-title h2{
-        font-size: 28px;
-    }
-
-    .package-card img{
-        height: 200px;
-    }
-
-    .package-btn{
-        width: 100%;
-    }
-}</style>
+    </style>
 
 </head>
 
 <body>
+
 <!-- header section start  -->
 <header>
     <nav>
@@ -330,7 +314,7 @@
                             <h3>info@garitripsuganda.com</h3>
                         </div>
                     </div>
-             >
+                    >
                     <div class="navBox3">
                         <div class="iconSvg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 25 35" fill="none">
@@ -379,474 +363,198 @@
                 </div>
             </div>
         </div>
-        <!-- MULTILINGUAL DROPDOWN START -->
-        <div class="language-switcher">
-            <button id="langBtn">
-                <i class="fas fa-globe"></i> Language
-            </button>
-
-            <div class="language-dropdown">
-                <a href="#" onclick="translateLanguage('en')">English</a>
-                <a href="#" onclick="translateLanguage('fr')">French</a>
-                <a href="#" onclick="translateLanguage('de')">German</a>
-                <a href="#" onclick="translateLanguage('nl')">Dutch</a>
-            </div>
-        </div>
-
-        <div id="google_translate_element"></div>
-        <!-- MULTILINGUAL DROPDOWN END -->
     </nav>
-    <style>
-
-        /* ==========================
-           GOOGLE TRANSLATE DROPDOWN
-        ========================== */
-
-        .language-switcher{
-            position:fixed;
-            top:120px;
-            right:20px;
-            z-index:99999;
-        }
-
-        #langBtn{
-            background:#2f6f3e;
-            color:#fff;
-            border:none;
-            padding:10px 18px;
-            border-radius:6px;
-            cursor:pointer;
-            font-size:15px;
-        }
-
-        .language-dropdown{
-            display:none;
-            background:#fff;
-            box-shadow:0 5px 15px rgba(0,0,0,.15);
-            border-radius:6px;
-            overflow:hidden;
-        }
-
-        .language-dropdown a{
-            display:block;
-            padding:10px 15px;
-            text-decoration:none;
-            color:#333;
-        }
-
-        .language-dropdown a:hover{
-            background:#f5f5f5;
-        }
-
-        .language-switcher:hover .language-dropdown{
-            display:block;
-        }
-
-        /* Hide ugly Google bar */
-        .goog-te-banner-frame{
-            display:none !important;
-        }
-
-        body{
-            top:0 !important;
-        }
-
-        /* Hide default widget */
-        #google_translate_element{
-            display:none;
-        }
-
-        /* =========================================
-           MOBILE RESPONSIVE SPACING STANDARDIZATION
-        ========================================= */
-
-        @media(max-width:768px){
-
-            .container,
-            .heroBackground,
-            .heroBoxes,
-            .introductionContainer,
-            .newsGridContainer,
-            .benefitsContainer,
-            .videoBackground,
-            .testimonialBackground,
-            .contactFormContainer,
-            .footerContainer,
-            .footerDouble,
-            .heroContainer,
-            .newsGridBoxes,
-            .testimonialContainer,
-            .contactLeft,
-            .contactRight,
-            .benefitsLeft,
-            .benefitsRight,
-            .introLeft,
-            .introRight{
-
-                padding:0 !important;
-                margin:0 !important;
-            }
-
-            .heroBoxes{
-                gap:10px !important;
-            }
-
-            .newsGridBoxes{
-                gap:15px !important;
-            }
-
-            .footerColumns{
-                padding:10px 0 !important;
-            }
-
-            .contactForm{
-                padding:10px !important;
-            }
-
-            iframe{
-                margin:0 !important;
-            }
-        }
-
-        /* Extra Small Phones */
-
-        @media(max-width:480px){
-
-            .container{
-                padding:0 !important;
-                margin:0 !important;
-                width:100% !important;
-            }
-
-            .heroText,
-            .introRight,
-            .benefitsRight,
-            .testimonialLeft,
-            .contactRight{
-                padding:15px !important;
-            }
-        }
-
-    </style>
 </header>
+<!-- INSERT YOUR EXISTING NAVBAR HERE -->
 
-<main>
+<section class="hero">
 
-    <!-- HERO SECTION KEPT INTACT -->
-    <div class="aboutBackground">
-        <div class="container">
-            <p>HOME &nbsp; / &nbsp; Safari Packages</p>
-            <h1>Experience Uganda Like Never Before</h1>
-        </div>
+    <div class="hero-content">
+
+        <h1>Homestay Experience in Uganda</h1>
+
+        <p>
+            Live Like a Local. Discover the Real Uganda.
+            Stay with Ugandan families and experience culture beyond the tourist trail.
+        </p>
+
     </div>
 
-    <!-- PACKAGES SECTION -->
-    <section class="packages-section">
-        <div class="container">
+</section>
 
-            <div class="section-title">
-                <h2>Uganda Safari Packages</h2>
-                <p>
-                    Explore hand-crafted safari experiences across Uganda —
-                    from gorilla trekking adventures to wildlife expeditions,
-                    cultural tours, and biking safaris.
-                </p>
-            </div>
+<div class="container">
 
-            <div class="packages-grid">
+    <h2 class="section-title">Why Choose a Homestay?</h2>
 
-                <!-- Card -->
-                <div class="package-card">
-                    <img src="./assets/images/semuliki-leopards.jpg">
+    <p class="intro">
 
-                    <div class="package-content">
-                        <span class="price-tag">From $2,850</span>
+        Unlike hotels and lodges, homestays allow you to experience Uganda through local communities, traditions, cuisine, and authentic daily life experiences.
 
-                        <h3>10-Day Uganda Wildlife & Gorilla Safari</h3>
+    </p>
 
-                        <ul>
-                            <li>Gorilla trekking in Bwindi</li>
-                            <li>Queen Elizabeth game drives</li>
-                            <li>Chimpanzee tracking & more...</li>
-                        </ul>
+    <div class="grid">
 
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-                    </div>
-                </div>
+        <div class="card">
 
-                <div class="package-card">
+            <img src="./assets/images/communities-img-1.jpg">
 
-                    <img src="./assets/images/gari-murchison-falls.jpg">
+            <h3>Authentic Families</h3>
 
-                    <div class="package-content">
-
-                        <span class="price-tag">From $850</span>
-
-                        <h3>5-Day Murchison Falls Safari</h3>
-
-                        <ul>
-                            <li>Big game viewing</li>
-                            <li>Nile boat cruise</li>
-                            <li>Top of the falls visit & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/gari-gorilla-1.JPG">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $1,250</span>
-
-                        <h3>3-Day Gorilla Trekking Safari</h3>
-
-                        <ul>
-                            <li>Permit included</li>
-                            <li>Guided trekking</li>
-                            <li>Scenic road drives & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/hero3.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $4,950</span>
-
-                        <h3>6-Day Ultimate Wildlife Safari</h3>
-
-                        <ul>
-                            <li>Lake Mburo walking safari</li>
-                            <li>Rhino tracking</li>
-                            <li>Cultural encounters & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/gal-13.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $1,950</span>
-
-                        <h3>8-Day Uganda Wildlife Safari</h3>
-
-                        <ul>
-                            <li>Shoebill tracking</li>
-                            <li>Boat cruises</li>
-                            <li>Big Five experience & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/communities-pic-3.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $6,850</span>
-
-                        <h3>24-Day Adventure Expedition</h3>
-
-                        <ul>
-                            <li>Community experiences</li>
-                            <li>Mount Moroto hiking</li>
-                            <li>Sipi Falls adventure & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/kampala-city.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $50</span>
-
-                        <h3>City Tour Safari</h3>
-
-                        <ul>
-                            <li>Museum visits</li>
-                            <li>Martyrs shrines</li>
-                            <li>Kasubi Tombs & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/aboutBgImg22.png">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $850</span>
-
-                        <h3>Bike Safari</h3>
-
-                        <ul>
-                            <li>Ride across parks</li>
-                            <li>Wildlife encounters</li>
-                            <li>Adventure routes & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/gari-homeStay.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $60</span>
-
-                        <h3>3-Day Uganda Cultural Homestay Experience</h3>
-
-                        <ul>
-                            <li>Explore rural and urban communities</li>
-                            <li>Learn local customs and traditions</li>
-                            <li>Support local families and sustainable tourism & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/gari-community-food-farm.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $50</span>
-
-                        <h3>2-Day Kampala Experience</h3>
-
-                        <ul>
-                            <li>Shoebill Tracking at Mabamba </li>
-                            <li>Craft Market Shopping </li>
-                            <li>Kampala Nightlife Experience & more...</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/gari-rhinos.JPG">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $250</span>
-
-                        <h3>Ziwa Rhino Sanctuary</h3>
-
-                        <ul>
-                            <li>Rhino tracking</li>
-                            <li>Nature walks</li>
-                            <li>Photography spots</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="package-card">
-
-                    <img src="./assets/images/destination-1.jpg">
-
-                    <div class="package-content">
-
-                        <span class="price-tag">From $150</span>
-
-                        <h3>3-Day Primates Adventure safari</h3>
-
-                        <ul>
-                            <li>Chimpanze tracking</li>
-                            <li>Gorilla Trekking</li>
-                            <li>Bird Watching</li>
-                        </ul>
-
-                        <a href="contact.html" class="package-btn">
-                            Request Itinerary
-                        </a>
-
-                    </div>
-
-                </div>
-                <!--end-->
-
-            </div>
+            <p>Stay with welcoming Ugandan host families and build meaningful connections.</p>
 
         </div>
-    </section>
 
-</main>
+        <div class="card">
+
+            <img src="./assets/images/gari- community-2.jpg">
+
+            <h3>Traditional Meals</h3>
+
+            <p>Enjoy authentic home-cooked Ugandan meals prepared with local ingredients.</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="./assets/images/communities-pic-3.jpg">
+
+            <h3>Cultural Activities</h3>
+
+            <p>Learn traditions, language, storytelling, dance, farming and crafts.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2 class="section-title">3-Day Cultural Homestay Experience</h2>
+
+    <div class="day-box">
+
+        <h2>Day 1: Arrival & Welcome</h2>
+
+        <ul>
+
+            <li>Airport / Kampala pickup</li>
+            <li>Transfer to host family</li>
+            <li>Traditional welcome ceremony</li>
+            <li>Cultural storytelling evening</li>
+
+        </ul>
+
+    </div>
+
+    <div class="day-box">
+
+        <h2>Day 2: Community Activities</h2>
+
+        <ul>
+
+            <li>Traditional cooking</li>
+            <li>Village walk</li>
+            <li>Basket weaving</li>
+            <li>Traditional dance</li>
+            <li>Language lessons</li>
+
+        </ul>
+
+    </div>
+
+    <div class="day-box">
+
+        <h2>Day 3: Community Project & Departure</h2>
+
+        <ul>
+
+            <li>Tree planting</li>
+            <li>School visits</li>
+            <li>Farewell ceremony</li>
+            <li>Return transfer</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2 class="section-title">Experiences Available</h2>
+
+    <div class="list-grid">
+
+        <div class="list-box">
+
+            <h3>Village Homestays</h3>
+
+            <ul>
+
+                <li>Coffee farming</li>
+                <li>Banana plantations</li>
+                <li>Village cycling</li>
+                <li>Cultural performances</li>
+
+            </ul>
+
+        </div>
+
+        <div class="list-box">
+
+            <h3>Urban Homestays</h3>
+
+            <ul>
+
+                <li>Kampala city tours</li>
+                <li>Food tasting</li>
+                <li>Craft markets</li>
+                <li>Nightlife experiences</li>
+
+            </ul>
+
+        </div>
+
+        <div class="list-box">
+
+            <h3>Perfect For</h3>
+
+            <ul>
+
+                <li>Students</li>
+                <li>Families</li>
+                <li>Volunteers</li>
+                <li>Researchers</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<section class="cta">
+
+    <h2>Book Your Homestay Adventure</h2>
+
+    <p>
+
+        Stay with local families, discover culture, and create unforgettable memories.
+
+    </p>
+
+    <a href="contact.html">
+
+        Request Your Itinerary
+
+    </a>
+
+</section>
+
+<!-- PASTE YOUR EXISTING FOOTER EXACTLY BELOW THIS LINE -->
+
 <!-- footer section start -->
 <footer>
     <!-- footer container start  -->
@@ -911,15 +619,15 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li>
-                       <a href="about.html"><span>About us</span></a>
+                        <a href="about.html"><span>About us</span></a>
                     </li>
                     <li>
-                      <a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                        <a href="safari-packages.html"><span>Safari Packages</span></a></li>
                     <li>
-                      <a href="contact.html"><span>Contact us</span></a></li>
+                        <a href="contact.html"><span>Contact us</span></a></li>
 
                     <li>
-                      <a href="index.html"><span>Home page</span></a></li>
+                        <a href="index.html"><span>Home page</span></a></li>
                 </ul>
             </div>
             <div class="footerColumns">
@@ -937,16 +645,16 @@
                 <h3>Contact</h3>
                 <ul>
                     <li>
-                     <span>+256 704 018 220 / +256 772392152</span>
+                        <span>+256 704 018 220 / +256 772392152</span>
                     </li>
                     <li>
-                      <span>info@garitripsuganda.com</span>
+                        <span>info@garitripsuganda.com</span>
                     </li>
                     <li>
                         <span>Gari Trips House - Kansanga kiwafu</span>
                     </li>
                     <li>
-                  <span>opposite Boston International school.</span>
+                        <span>opposite Boston International school.</span>
                     </li>
                 </ul>
                 <form class="footerForm">
@@ -1005,7 +713,7 @@
 <!-- WhatsApp Floating Button End -->
 <script>
     document.getElementById("safe-hamburger").onclick = function () {
-      document.getElementById("safe-menu").classList.toggle("active");
+        document.getElementById("safe-menu").classList.toggle("active");
     };
 </script>
 
@@ -1016,53 +724,25 @@
     const video = document.getElementById("video-player");
 
     trigger.onclick = function () {
-      modal.style.display = "flex";
-      video.play();
+        modal.style.display = "flex";
+        video.play();
     };
 
     closeBtn.onclick = function () {
-      modal.style.display = "none";
-      video.pause();
-      video.currentTime = 0;
-    };
-
-    window.onclick = function (e) {
-      if (e.target === modal) {
         modal.style.display = "none";
         video.pause();
         video.currentTime = 0;
-      }
+    };
+
+    window.onclick = function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+        }
     };
 </script>
 
-<!-- GOOGLE TRANSLATE SCRIPT -->
-
-<script>
-
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {
-                pageLanguage: 'en',
-                includedLanguages: 'en,fr,de,nl',
-                autoDisplay: false
-            },
-            'google_translate_element');
-    }
-
-    function translateLanguage(lang){
-
-        var select =
-            document.querySelector(".goog-te-combo");
-
-        if(select){
-            select.value = lang;
-            select.dispatchEvent(new Event("change"));
-        }
-    }
-
-</script>
-
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
+
 </html>

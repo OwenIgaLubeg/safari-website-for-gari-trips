@@ -1075,8 +1075,9 @@
 }
 
 .benefitsBoxes {
-  width: 90%;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 12px 30px;
 }
 
 .benefitsTextsBox {
@@ -7788,6 +7789,264 @@ right:0;
 font-size:35px;
 }
 
+}
+/* ==========================================
+   GALLERY PAGE STYLES - GARI TRIPS UGANDA
+   ========================================== */
+
+/* HERO SECTION */
+.galleryHero {
+  position: relative;
+  width: 100%;
+  min-height: 65vh;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+  url("../assets/images/gari-trips-visitors-10.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.galleryHeroContent {
+  max-width: 900px;
+  padding: 20px;
+  color: #fff;
+}
+
+.galleryHeroContent h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.galleryHeroContent p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* SECTION TITLE */
+.gallerySection {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.galleryHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.galleryHeading h2 {
+  font-size: 2.8rem;
+  color: #1c3f2e;
+  margin-bottom: 10px;
+}
+
+.galleryHeading p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* IMAGE GRID */
+.galleryGrid {
+  width: 95%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 25px;
+}
+
+/* IMAGE CARD */
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: all .4s ease;
+}
+
+.galleryItem:hover {
+  transform: translateY(-8px);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.08);
+}
+
+/* IMAGE OVERLAY */
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: .4s;
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1;
+}
+
+.galleryOverlay h3 {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* FEATURE SECTION */
+.galleryIntro {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.galleryIntro img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.galleryIntroText h2 {
+  font-size: 2.5rem;
+  color: #1c3f2e;
+  margin-bottom: 20px;
+}
+
+.galleryIntroText p {
+  line-height: 1.9;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* CTA SECTION */
+.galleryCTA {
+  background: #1c3f2e;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.galleryCTA h2 {
+  color: #fff;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.galleryCTA p {
+  color: #e7e7e7;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.galleryCTA a {
+  display: inline-block;
+  background: #f8b400;
+  color: #000;
+  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.galleryCTA a:hover {
+  background: #fff;
+}
+
+/* LIGHTBOX EFFECT */
+.galleryItem {
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+
+  .galleryHeroContent h1{
+    font-size:3rem;
+  }
+
+  .galleryIntro{
+    grid-template-columns:1fr;
+  }
+
+  .galleryHeading h2{
+    font-size:2.3rem;
+  }
+}
+
+@media(max-width:768px){
+
+  .galleryHero{
+    min-height:55vh;
+  }
+
+  .galleryHeroContent h1{
+    font-size:2.3rem;
+  }
+
+  .galleryHeroContent p{
+    font-size:1rem;
+  }
+
+  .galleryGrid{
+    grid-template-columns:1fr;
+    width:92%;
+  }
+
+  .galleryItem img{
+    height:260px;
+  }
+
+  .galleryCTA h2{
+    font-size:2rem;
+  }
+}
+
+@media(max-width:480px){
+
+  .galleryHeroContent h1{
+    font-size:1.9rem;
+  }
+
+  .galleryHeading h2{
+    font-size:1.8rem;
+  }
+
+  .galleryIntroText h2{
+    font-size:1.8rem;
+  }
+
+  .galleryCTA h2{
+    font-size:1.7rem;
+  }
+
+  .gallerySection,
+  .galleryIntro,
+  .galleryCTA{
+    padding-left:15px;
+    padding-right:15px;
+  }
 }
 
 

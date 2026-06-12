@@ -210,12 +210,157 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
       </div>
-      <!-- second header end  -->
     </div>
-    <!-- main container end  -->
+    <!-- MULTILINGUAL DROPDOWN START -->
+    <div class="language-switcher">
+      <button id="langBtn">
+        <i class="fas fa-globe"></i> Language
+      </button>
+
+      <div class="language-dropdown">
+        <a href="#" onclick="translateLanguage('en')">English</a>
+        <a href="#" onclick="translateLanguage('fr')">French</a>
+        <a href="#" onclick="translateLanguage('de')">German</a>
+        <a href="#" onclick="translateLanguage('nl')">Dutch</a>
+      </div>
+    </div>
+
+    <div id="google_translate_element"></div>
+    <!-- MULTILINGUAL DROPDOWN END -->
   </nav>
+  <style>
+
+    /* ==========================
+       GOOGLE TRANSLATE DROPDOWN
+    ========================== */
+
+    .language-switcher{
+      position:fixed;
+      top:120px;
+      right:20px;
+      z-index:99999;
+    }
+
+    #langBtn{
+      background:#2f6f3e;
+      color:#fff;
+      border:none;
+      padding:10px 18px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:15px;
+    }
+
+    .language-dropdown{
+      display:none;
+      background:#fff;
+      box-shadow:0 5px 15px rgba(0,0,0,.15);
+      border-radius:6px;
+      overflow:hidden;
+    }
+
+    .language-dropdown a{
+      display:block;
+      padding:10px 15px;
+      text-decoration:none;
+      color:#333;
+    }
+
+    .language-dropdown a:hover{
+      background:#f5f5f5;
+    }
+
+    .language-switcher:hover .language-dropdown{
+      display:block;
+    }
+
+    /* Hide ugly Google bar */
+    .goog-te-banner-frame{
+      display:none !important;
+    }
+
+    body{
+      top:0 !important;
+    }
+
+    /* Hide default widget */
+    #google_translate_element{
+      display:none;
+    }
+
+    /* =========================================
+       MOBILE RESPONSIVE SPACING STANDARDIZATION
+    ========================================= */
+
+    @media(max-width:768px){
+
+      .container,
+      .heroBackground,
+      .heroBoxes,
+      .introductionContainer,
+      .newsGridContainer,
+      .benefitsContainer,
+      .videoBackground,
+      .testimonialBackground,
+      .contactFormContainer,
+      .footerContainer,
+      .footerDouble,
+      .heroContainer,
+      .newsGridBoxes,
+      .testimonialContainer,
+      .contactLeft,
+      .contactRight,
+      .benefitsLeft,
+      .benefitsRight,
+      .introLeft,
+      .introRight{
+
+        padding:0 !important;
+        margin:0 !important;
+      }
+
+      .heroBoxes{
+        gap:10px !important;
+      }
+
+      .newsGridBoxes{
+        gap:15px !important;
+      }
+
+      .footerColumns{
+        padding:10px 0 !important;
+      }
+
+      .contactForm{
+        padding:10px !important;
+      }
+
+      iframe{
+        margin:0 !important;
+      }
+    }
+
+    /* Extra Small Phones */
+
+    @media(max-width:480px){
+
+      .container{
+        padding:0 !important;
+        margin:0 !important;
+        width:100% !important;
+      }
+
+      .heroText,
+      .introRight,
+      .benefitsRight,
+      .testimonialLeft,
+      .contactRight{
+        padding:15px !important;
+      }
+    }
+
+  </style>
 </header>
 <!-- header section end  -->
 
@@ -497,6 +642,36 @@
       document.getElementById("safe-menu").classList.toggle("active");
     };
   </script>
+
+<!-- GOOGLE TRANSLATE SCRIPT -->
+
+<script>
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,fr,de,nl',
+              autoDisplay: false
+            },
+            'google_translate_element');
+  }
+
+  function translateLanguage(lang){
+
+    var select =
+            document.querySelector(".goog-te-combo");
+
+    if(select){
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+  }
+
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 
 </html>

@@ -217,12 +217,157 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
-            <!-- second header end  -->
         </div>
-        <!-- main container end  -->
+        <!-- MULTILINGUAL DROPDOWN START -->
+        <div class="language-switcher">
+            <button id="langBtn">
+                <i class="fas fa-globe"></i> Language
+            </button>
+
+            <div class="language-dropdown">
+                <a href="#" onclick="translateLanguage('en')">English</a>
+                <a href="#" onclick="translateLanguage('fr')">French</a>
+                <a href="#" onclick="translateLanguage('de')">German</a>
+                <a href="#" onclick="translateLanguage('nl')">Dutch</a>
+            </div>
+        </div>
+
+        <div id="google_translate_element"></div>
+        <!-- MULTILINGUAL DROPDOWN END -->
     </nav>
+    <style>
+
+        /* ==========================
+           GOOGLE TRANSLATE DROPDOWN
+        ========================== */
+
+        .language-switcher{
+            position:fixed;
+            top:120px;
+            right:20px;
+            z-index:99999;
+        }
+
+        #langBtn{
+            background:#2f6f3e;
+            color:#fff;
+            border:none;
+            padding:10px 18px;
+            border-radius:6px;
+            cursor:pointer;
+            font-size:15px;
+        }
+
+        .language-dropdown{
+            display:none;
+            background:#fff;
+            box-shadow:0 5px 15px rgba(0,0,0,.15);
+            border-radius:6px;
+            overflow:hidden;
+        }
+
+        .language-dropdown a{
+            display:block;
+            padding:10px 15px;
+            text-decoration:none;
+            color:#333;
+        }
+
+        .language-dropdown a:hover{
+            background:#f5f5f5;
+        }
+
+        .language-switcher:hover .language-dropdown{
+            display:block;
+        }
+
+        /* Hide ugly Google bar */
+        .goog-te-banner-frame{
+            display:none !important;
+        }
+
+        body{
+            top:0 !important;
+        }
+
+        /* Hide default widget */
+        #google_translate_element{
+            display:none;
+        }
+
+        /* =========================================
+           MOBILE RESPONSIVE SPACING STANDARDIZATION
+        ========================================= */
+
+        @media(max-width:768px){
+
+            .container,
+            .heroBackground,
+            .heroBoxes,
+            .introductionContainer,
+            .newsGridContainer,
+            .benefitsContainer,
+            .videoBackground,
+            .testimonialBackground,
+            .contactFormContainer,
+            .footerContainer,
+            .footerDouble,
+            .heroContainer,
+            .newsGridBoxes,
+            .testimonialContainer,
+            .contactLeft,
+            .contactRight,
+            .benefitsLeft,
+            .benefitsRight,
+            .introLeft,
+            .introRight{
+
+                padding:0 !important;
+                margin:0 !important;
+            }
+
+            .heroBoxes{
+                gap:10px !important;
+            }
+
+            .newsGridBoxes{
+                gap:15px !important;
+            }
+
+            .footerColumns{
+                padding:10px 0 !important;
+            }
+
+            .contactForm{
+                padding:10px !important;
+            }
+
+            iframe{
+                margin:0 !important;
+            }
+        }
+
+        /* Extra Small Phones */
+
+        @media(max-width:480px){
+
+            .container{
+                padding:0 !important;
+                margin:0 !important;
+                width:100% !important;
+            }
+
+            .heroText,
+            .introRight,
+            .benefitsRight,
+            .testimonialLeft,
+            .contactRight{
+                padding:15px !important;
+            }
+        }
+
+    </style>
 </header>
 <!-- header section end  -->
     <main>
@@ -267,8 +412,8 @@
                 <div class="contactLeft">
                     <iframe
                             src="https://maps.google.com/maps?q=Gari%20Trips%20Uganda,%2010b%20Heritage%20Drive,%20Kampala,%20Uganda&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                            width="100%"
-                            height="550"
+                            width="110%"
+                            height="700"
                             style="border:0; border-radius:12px;"
                             allowfullscreen=""
                             loading="lazy"
@@ -276,40 +421,121 @@
                     </iframe>
                 </div>
                 <div class="contactRight">
-                    <p>Contact us</p>
-                    <h2>Write a Message</h2>
+                    <h2>Call to Action</h2><br>
+                    <h3>👉 Get your personalized safari itinerary within 24 hours</h3>
                     <div class="contactForm">
                         <div class="contactForm">
                             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
                                 <!-- Web3Forms Access Key -->
-                                <input type="hidden" name="access_key" value="4413bb15-a2cd-42e7-b27d-21e4098b5d10">
+                                <input type="hidden" name="access_key" value="3d93cd29-532a-4310-b5aa-6693089833">
 
                                 <!-- Email Settings -->
-                                <input type="hidden" name="subject" value="New Message from Jalhab Mixed Farm Website">
-                                <input type="hidden" name="from_name" value="Jalhab Mixed Farm Website">
-                                <input type="hidden" name="redirect" value="https://jalhabmixedfarm.com/thank-you.html">
+                                <input type="hidden" name="subject" value="New Safari Inquiry - Gari Trips Uganda">
+                                <input type="hidden" name="from_name" value="Gari Trips Uganda Website">
+                                <input type="hidden" name="redirect" value="https://garitripsuganda.com/thank-you.html">
 
                                 <!-- Spam Protection -->
-                                <input type="checkbox" name="botcheck" style="display: none;">
+                                <input type="checkbox" name="botcheck" style="display:none;">
 
-                                <!-- Form Fields -->
-                                <input type="text" id="name" name="name" placeholder="Name" required>
+                                <!-- Contact Information -->
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       placeholder="Full Name"
+                                       required>
 
-                                <input type="email" id="email" name="email" placeholder="Email" required>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       placeholder="Email Address"
+                                       required>
 
-                                <textarea id="message" name="message" placeholder="Message" required></textarea>
+                                <input type="tel"
+                                       id="phone"
+                                       name="phone"
+                                       placeholder="Phone Number (WhatsApp)"
+                                       required>
+
+                                <input type="text"
+                                       id="country"
+                                       name="country"
+                                       placeholder="Country">
+
+                                <input type="text"
+                                       id="tour"
+                                       name="tour_interest"
+                                       placeholder="Safari Package of Interest">
+
+                                <textarea id="message"
+                                          name="message"
+                                          placeholder="Tell us about your safari plans..."
+                                          rows="6"
+                                          required></textarea>
 
                                 <div class="button">
                                     <button class="contactButton" type="submit" id="submitBtn">
-                                        <span id="btnText">Send a Message</span>
+                                        <span id="btnText">Request Safari Quote</span>
                                         <span id="spinner" style="display:none;">⏳ Sending...</span>
                                     </button>
                                 </div>
 
                                 <!-- Status Messages -->
                                 <p id="form-status" style="margin-top:10px;"></p>
-
                             </form>
+
+                            <script>
+                                const form = document.getElementById("contact-form");
+                                const status = document.getElementById("form-status");
+                                const btnText = document.getElementById("btnText");
+                                const spinner = document.getElementById("spinner");
+
+                                form.addEventListener("submit", async function(e) {
+                                    e.preventDefault();
+
+                                    btnText.style.display = "none";
+                                    spinner.style.display = "inline";
+
+                                    const formData = new FormData(form);
+
+                                    try {
+
+                                        const response = await fetch(form.action, {
+                                            method: "POST",
+                                            body: formData
+                                        });
+
+                                        const result = await response.json();
+
+                                        if (result.success) {
+
+                                            status.innerHTML =
+                                                "✅ Thank you! Your safari inquiry has been sent successfully. We will contact you shortly.";
+
+                                            status.style.color = "green";
+
+                                            form.reset();
+
+                                        } else {
+
+                                            status.innerHTML =
+                                                "❌ Failed to send your inquiry. Please try again.";
+
+                                            status.style.color = "red";
+                                        }
+
+                                    } catch (error) {
+
+                                        status.innerHTML =
+                                            "⚠️ Network error. Please try again later.";
+
+                                        status.style.color = "orange";
+                                    }
+
+                                    btnText.style.display = "inline";
+                                    spinner.style.display = "none";
+                                });
+                            </script>
 
                         </div>
 
@@ -355,7 +581,6 @@
                                 spinner.style.display = "none";
                             });
                         </script>
-
                     </div>
                 </div>
                 <!-- contact form container end  -->
@@ -546,6 +771,34 @@
     };
 </script>
 
-</body>
+<!-- GOOGLE TRANSLATE SCRIPT -->
 
+<script>
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,de,nl',
+                autoDisplay: false
+            },
+            'google_translate_element');
+    }
+
+    function translateLanguage(lang){
+
+        var select =
+            document.querySelector(".goog-te-combo");
+
+        if(select){
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+        }
+    }
+
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
 </html>
