@@ -1,10 +1,2530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hiking Adventures in Uganda | Mountain Trekking | Gari Trips Uganda</title>
+
+    <meta name="description" content="Explore Uganda's majestic mountains with Gari Trips. Hike Mount Rwenzori, Mount Elgon, Mount Sabyinyo, and more. Expert guides, unforgettable summit experiences." />
+    <meta name="keywords" content="Uganda hiking, Mount Rwenzori trekking, Mount Elgon hike, Uganda mountain climbing, gorilla trekking mountains" />
+    <meta name="author" content="Gari Trips Uganda" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/images/gari-trips-logo-brown.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========================================
+           GLOBAL RESET & BASE STYLES
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2f6f3e;
+            --dark-green: #1a4d28;
+            --light-green: #4a9d5e;
+            --accent-green: #7bc67e;
+            --safari-brown: #8b5e3c;
+            --dark-brown: #5c3d2e;
+            --light-brown: #c49a6c;
+            --cream: #fdf8f0;
+            --warm-white: #fffef9;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --gold: #d4a853;
+            --nav-footer-bg: rgba(183, 202, 185, 0.4);
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background: var(--warm-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+           HEADER & NAVIGATION
+           Background: rgba(183, 202, 185, 0.4)
+        ======================================== */
+        header {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .headAgriosFirst {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* ===== SINGLE STANDARD HAMBURGER ===== */
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--dark-green);
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(47, 111, 62, 0.15);
+            transition: var(--transition);
+            user-select: none;
+            line-height: 1;
+        }
+
+        .hamburger:hover {
+            background: rgba(47, 111, 62, 0.3);
+            transform: scale(1.05);
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(180deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            z-index: 9999;
+            transition: left 0.4s ease;
+            padding: 30px 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+        }
+
+        .sidebar.active {
+            left: 0;
+            display: block;
+        }
+
+        .sidebar ul {
+            margin-top: 20px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 12px 15px;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .logo a {
+            display: inline-block;
+        }
+
+        .logo svg {
+            max-width: 170px;
+            height: auto;
+        }
+
+        .socialIcons ul {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .socialIcons .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .socialIcons .icon:hover {
+            background: var(--safari-brown);
+            transform: translateY(-3px);
+        }
+
+        .navBoxes {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navBox, .navBox3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .iconText p {
+            font-size: 12px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .iconText h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-green);
+            margin: 0;
+        }
+
+        .headAgriosSecond {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 0;
+            border-top: 1px solid rgba(47, 111, 62, 0.1);
+        }
+
+        .navItems ul {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navItems ul li a {
+            display: block;
+            padding: 15px 30px;
+            color: var(--dark-green);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navItems ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .navItems ul li a:hover::after,
+        .navItems ul li a.active::after {
+            width: 60%;
+        }
+
+        .navItems ul li a:hover {
+            background: rgba(47, 111, 62, 0.08);
+            color: var(--primary-green);
+        }
+
+        .navItems ul li a.active {
+            background: rgba(47, 111, 62, 0.12);
+            color: var(--primary-green);
+        }
+
+        /* ========================================
+           LANGUAGE SWITCHER
+        ======================================== */
+        .language-switcher {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            z-index: 99999;
+        }
+
+        #langBtn {
+            background: var(--primary-green);
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        #langBtn:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .language-dropdown {
+            display: none;
+            background: #fff;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 5px;
+            min-width: 150px;
+        }
+
+        .language-dropdown a {
+            display: block;
+            padding: 12px 18px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            transition: var(--transition);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .language-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .language-dropdown a:hover {
+            background: var(--cream);
+            color: var(--primary-green);
+            padding-left: 22px;
+        }
+
+        .language-switcher:hover .language-dropdown {
+            display: block;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        #google_translate_element {
+            display: none;
+        }
+
+        /* ========================================
+           HIKING PAGE - HERO SECTION
+        ======================================== */
+        .hiking-hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 77, 40, 0.85) 0%, rgba(44, 44, 44, 0.7) 100%),
+            url('https://images.unsplash.com/photo-1535083783855-76ae62b2914e?w=1600&q=80') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hiking-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .hiking-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 850px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hiking-hero .tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 8px 22px;
+            border: 1px solid rgba(212, 168, 83, 0.4);
+            border-radius: 30px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .hiking-hero h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+            line-height: 1.1;
+        }
+
+        .hiking-hero h1 span {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+        }
+
+        .hiking-hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hiking-hero .breadcrumb {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .hiking-hero .breadcrumb a {
+            color: var(--gold);
+        }
+
+        .hiking-hero .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .hero-stat .lbl {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* ========================================
+           SECTION COMMON STYLES
+        ======================================== */
+        .hiking-section {
+            padding: 90px 0;
+        }
+
+        .hiking-section.alt-bg {
+            background: linear-gradient(135deg, var(--cream) 0%, #f5efe6 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header .eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--safari-brown);
+            margin-bottom: 12px;
+            padding: 6px 18px;
+            background: rgba(139, 94, 60, 0.1);
+            border-radius: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2.6rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           INTRO SECTION - WHY HIKE IN UGANDA
+        ======================================== */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-image-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .intro-image-wrap img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .intro-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .intro-image-wrap .elevation-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-brown) 100%);
+            color: #fff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-hover);
+            text-align: center;
+            border: 4px solid #fff;
+        }
+
+        .elevation-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .elevation-badge .label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .intro-text .eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--safari-brown);
+            margin-bottom: 12px;
+        }
+
+        .intro-text h2 {
+            font-size: 2.4rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .intro-text h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .intro-text p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .intro-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .intro-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--cream);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .intro-feature:hover {
+            background: #fff;
+            box-shadow: var(--shadow);
+            transform: translateX(5px);
+        }
+
+        .intro-feature i {
+            color: var(--primary-green);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .intro-feature span {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* ========================================
+           MOUNTAINS SHOWCASE SECTION
+        ======================================== */
+        .mountain-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+            background: #fff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .mountain-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .mountain-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .mountain-card.reverse {
+            direction: rtl;
+        }
+
+        .mountain-card.reverse > * {
+            direction: ltr;
+        }
+
+        .mountain-image {
+            position: relative;
+            height: 100%;
+            min-height: 450px;
+            overflow: hidden;
+        }
+
+        .mountain-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .mountain-card:hover .mountain-image img {
+            transform: scale(1.05);
+        }
+
+        .mountain-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(212, 168, 83, 0.4);
+        }
+
+        .mountain-card.reverse .mountain-badge {
+            left: auto;
+            right: 20px;
+        }
+
+        .mountain-content {
+            padding: 50px;
+        }
+
+        .mountain-content .eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--safari-brown);
+            margin-bottom: 10px;
+        }
+
+        .mountain-content h3 {
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .mountain-content .subtitle {
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .mountain-content p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .mountain-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+            padding: 20px;
+            background: var(--cream);
+            border-radius: 12px;
+        }
+
+        .mountain-stat {
+            text-align: center;
+        }
+
+        .mountain-stat .value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-green);
+            line-height: 1;
+        }
+
+        .mountain-stat .label {
+            font-size: 11px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        .mountain-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .highlight-tag {
+            padding: 6px 14px;
+            background: rgba(47, 111, 62, 0.1);
+            color: var(--primary-green);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid rgba(47, 111, 62, 0.2);
+        }
+
+        .btn-mountain {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(47, 111, 62, 0.3);
+        }
+
+        .btn-mountain:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(47, 111, 62, 0.4);
+            gap: 14px;
+        }
+
+        /* ========================================
+           DIFFICULTY LEVELS SECTION
+        ======================================== */
+        .difficulty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .difficulty-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .difficulty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .difficulty-card.moderate {
+            border-top-color: var(--gold);
+        }
+
+        .difficulty-card.challenging {
+            border-top-color: var(--safari-brown);
+        }
+
+        .difficulty-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 32px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(47, 111, 62, 0.3);
+        }
+
+        .difficulty-card.moderate .difficulty-icon {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-brown) 100%);
+            box-shadow: 0 4px 15px rgba(212, 168, 83, 0.4);
+        }
+
+        .difficulty-card.challenging .difficulty-icon {
+            background: linear-gradient(135deg, var(--safari-brown) 0%, var(--dark-brown) 100%);
+            box-shadow: 0 4px 15px rgba(139, 94, 60, 0.4);
+        }
+
+        .difficulty-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .difficulty-card.moderate h3 {
+            color: var(--safari-brown);
+        }
+
+        .difficulty-card.challenging h3 {
+            color: var(--dark-brown);
+        }
+
+        .difficulty-card .duration {
+            display: inline-block;
+            padding: 4px 14px;
+            background: var(--cream);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .difficulty-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .difficulty-card ul {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .difficulty-card ul li {
+            padding: 6px 0 6px 22px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .difficulty-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* ========================================
+           PACKING ESSENTIALS SECTION
+        ======================================== */
+        .packing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .packing-image-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .packing-image-wrap img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .packing-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .packing-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .packing-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-left: 3px solid var(--primary-green);
+        }
+
+        .packing-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow);
+            border-left-color: var(--gold);
+        }
+
+        .packing-item i {
+            color: var(--primary-green);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .packing-item span {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* ========================================
+           GALLERY SECTION
+        ======================================== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 200px 200px;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent 50%, rgba(26, 77, 40, 0.85) 100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover::after {
+            background: linear-gradient(transparent 30%, rgba(26, 77, 40, 0.9) 100%);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .gallery-caption h4 {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        .gallery-caption p {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* ========================================
+           TESTIMONIALS SECTION
+        ======================================== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 18px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-info strong {
+            display: block;
+            font-size: 14px;
+            color: var(--dark-green);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .testimonial-info span {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           CTA SECTION
+        ======================================== */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(26, 77, 40, 0.9) 0%, rgba(92, 61, 46, 0.85) 100%),
+            url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .cta-content {
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content .tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 16px 38px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-cta.primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-brown) 100%);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4);
+        }
+
+        .btn-cta.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 168, 83, 0.6);
+        }
+
+        .btn-cta.secondary {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btn-cta.secondary:hover {
+            background: #fff;
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        /* ========================================
+           FOOTER
+           Background: rgba(183, 202, 185, 0.4)
+        ======================================== */
+        footer {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-dark);
+            padding-top: 60px;
+            border-top: 1px solid rgba(47, 111, 62, 0.15);
+        }
+
+        .footerContainer {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .footerColumns h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footerColumns h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 2px;
+        }
+
+        .footerLogo img {
+            max-width: 180px;
+            margin-bottom: 15px;
+            filter: none;
+        }
+
+        .footerColumns p {
+            color: var(--text-dark);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.85;
+        }
+
+        .footerSocialIcons ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footerSocialIcons .icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footerSocialIcons .icon:hover {
+            background: var(--safari-brown);
+            transform: translateY(-3px);
+        }
+
+        .footerColumns ul li {
+            margin-bottom: 10px;
+        }
+
+        .footerColumns ul li a,
+        .footerColumns ul li span {
+            color: var(--text-dark);
+            font-size: 14px;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footerColumns ul li a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+            opacity: 1;
+        }
+
+        .footerColText li.colorWhite a {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .footerColText li.colorWhite a:hover {
+            color: var(--primary-green);
+            opacity: 1;
+        }
+
+        .footerColText li.colorYellow a {
+            color: var(--safari-brown);
+            font-weight: 500;
+        }
+
+        .footerColText li.colorYellow a:hover {
+            color: var(--dark-brown);
+        }
+
+        .footerForm {
+            margin-top: 15px;
+        }
+
+        .footerForm input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(47, 111, 62, 0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.6);
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footerForm input::placeholder {
+            color: var(--text-light);
+        }
+
+        .footerForm input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 0 0 3px rgba(47, 111, 62, 0.1);
+        }
+
+        .footerContent {
+            border-top: 1px solid rgba(47, 111, 62, 0.15);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerContent ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footerContent ul li {
+            color: var(--text-dark);
+            font-size: 13px;
+            opacity: 0.75;
+        }
+
+        /* ========================================
+           WHATSAPP FLOATING BUTTON
+        ======================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* ========================================
+           SCROLL REVEAL ANIMATION
+        ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+        @media (max-width: 1024px) {
+            .difficulty-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footerContainer {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .navBoxes {
+                display: none;
+            }
+
+            .socialIcons {
+                display: none;
+            }
+
+            .headAgriosSecond {
+                display: none;
+            }
+
+            .hiking-hero {
+                height: 70vh;
+                min-height: 450px;
+            }
+
+            .hiking-hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hiking-hero p {
+                font-size: 1rem;
+            }
+
+            .hiking-section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .intro-grid,
+            .packing-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .intro-image-wrap img,
+            .packing-image-wrap img {
+                height: 350px;
+            }
+
+            .mountain-card {
+                grid-template-columns: 1fr;
+                margin-bottom: 50px;
+            }
+
+            .mountain-card.reverse {
+                direction: ltr;
+            }
+
+            .mountain-image {
+                min-height: 300px;
+            }
+
+            .mountain-content {
+                padding: 30px 25px;
+            }
+
+            .mountain-content h3 {
+                font-size: 1.7rem;
+            }
+
+            .difficulty-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packing-list {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .footerContainer {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .language-switcher {
+                top: 80px;
+                right: 10px;
+            }
+
+            #langBtn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+
+            .intro-image-wrap .elevation-badge {
+                right: 15px;
+                bottom: -15px;
+                padding: 18px 22px;
+            }
+
+            .elevation-badge .number {
+                font-size: 1.8rem;
+            }
+
+            .intro-features {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: 25px;
+            }
+
+            .hero-stat .num {
+                font-size: 2rem;
+            }
+
+            .mountain-stats {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hiking-hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hiking-hero .tagline {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .intro-text h2,
+            .mountain-content h3 {
+                font-size: 1.6rem;
+            }
+
+            .btn-cta {
+                padding: 14px 28px;
+                font-size: 13px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 26px;
+                height: 26px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- header section start  -->
+<header>
+    <nav>
+        <div class="container">
+            <div class="headAgriosFirst">
+                <!-- SINGLE STANDARD HAMBURGER BUTTON -->
+                <div class="hamburger" id="hamburger">☰</div>
+
+                <!-- Sidebar / Menu -->
+                <div class="sidebar" id="sidebar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="safari-packages.html">Safari Packages</a></li>
+                        <li><a href="hiking.html" class="active">Hiking</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- header logo start  -->
+                <div class="logo">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             width="170"
+                             height="52"
+                             viewBox="0 0 170 52"
+                             fill="none">
+                            <rect width="170" height="51.5" fill="url(#pattern0_4138_999)" />
+                            <defs>
+                                <pattern id="pattern0_4138_999"
+                                         patternContentUnits="objectBoundingBox"
+                                         width="10"
+                                         height="6">
+                                    <use xlink:href="#image0_4138_999"
+                                         transform="scale(0.00294118 0.00970874)" />
+                                </pattern>
+                                <image id="image0_4138_999"
+                                       width="340"
+                                       height="103"
+                                       xlink:href="./assets/images/gari-trips-logo-green.png" />
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <!-- header logo end  -->
+
+                <!-- social icons start  -->
+                <div class="socialIcons">
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div></a></li>
+                        <li><a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div></a></li>
+                        <li><a href="https://www.youtube.com/@GariTrips"><div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div></a></li>
+                        <li><a href="https://www.instagram.com/garitripsuganda"><div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div></a></li>
+                    </ul>
+                </div>
+                <!-- social icons end  -->
+
+                <!-- nav boxes start  -->
+                <div class="navBoxes">
+                    <div class="navBox">
+                        <div class="iconText">
+                            <p>Call anytime</p>
+                            <h3>+256 704 018 220</h3>
+                        </div>
+                    </div>
+                    <div class="navBox">
+                        <div class="iconText">
+                            <p>Send email</p>
+                            <h3>info@garitripsuganda.com</h3>
+                        </div>
+                    </div>
+                    <div class="navBox3">
+                        <div class="iconText">
+                            <p>Kansanga Kiwafu </p>
+                            <h3>(opp. Boston Int sch)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headAgriosSecond">
+                <div class="navItems">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="about.html"><span>About</span></a></li>
+                        <li><a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                        <li><a href="hiking.html" class="active"><span>Hiking</span></a></li>
+                        <li><a href="blogs.html"><span>Blog</span></a></li>
+                        <li><a href="contact.html"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MULTILINGUAL DROPDOWN START -->
+        <div class="language-switcher">
+            <button id="langBtn"><i class="fas fa-globe"></i> Language</button>
+            <div class="language-dropdown">
+                <a href="#" onclick="translateLanguage('en')">English</a>
+                <a href="#" onclick="translateLanguage('fr')">French</a>
+                <a href="#" onclick="translateLanguage('de')">German</a>
+                <a href="#" onclick="translateLanguage('nl')">Dutch</a>
+            </div>
+        </div>
+        <div id="google_translate_element"></div>
+        <!-- MULTILINGUAL DROPDOWN END -->
+    </nav>
+</header>
+
+<main>
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="hiking-hero">
+        <div class="hiking-hero-content">
+            <span class="tagline">Conquer the Peaks of Africa</span>
+            <h1>Hiking Adventures <span>in Uganda</span></h1>
+            <p>From the snow-capped peaks of the Rwenzori Mountains to the ancient slopes of Mount Elgon, Uganda offers some of Africa's most breathtaking hiking experiences. Lace up your boots and embark on a journey of a lifetime.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp; / &nbsp; <span>Hiking Adventures</span>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">6+</div>
+                    <div class="lbl">Mountains</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">5,109m</div>
+                    <div class="lbl">Highest Peak</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">15+</div>
+                    <div class="lbl">Trails</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">500+</div>
+                    <div class="lbl">Happy Hikers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         INTRO SECTION - WHY HIKE IN UGANDA
+    ======================================== -->
+    <section class="hiking-section">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-image-wrap reveal-left">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Hiker on mountain trail" />
+                    <div class="elevation-badge">
+                        <div class="number">5,109m</div>
+                        <div class="label">Margherita Peak<br>Rwenzori</div>
+                    </div>
+                </div>
+                <div class="intro-text reveal-right">
+                    <span class="eyebrow">Why Hike in Uganda</span>
+                    <h2>A Hiker's Paradise in the Heart of Africa</h2>
+                    <p>Uganda is home to some of Africa's most spectacular mountains, each offering unique landscapes, ecosystems, and challenges. From glaciated peaks to volcanic calderas, ancient rainforests to alpine meadows, every trail tells a different story.</p>
+                    <p>Whether you're a seasoned mountaineer seeking the technical challenge of the Rwenzori "Mountains of the Moon" or a casual hiker looking for a scenic day trek up Mount Elgon, Gari Trips Uganda has the perfect adventure waiting for you.</p>
+                    <div class="intro-features">
+                        <div class="intro-feature">
+                            <i class="fas fa-mountain"></i>
+                            <span>Diverse Terrains</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Expert Local Guides</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Rich Biodiversity</span>
+                        </div>
+                        <div class="intro-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safety First</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         MOUNTAINS SHOWCASE SECTION
+    ======================================== -->
+    <section class="hiking-section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Our Mountains</span>
+                <h2>Explore Uganda's Majestic Peaks</h2>
+                <p>Each mountain in Uganda offers a unique hiking experience — from challenging multi-day expeditions to scenic day hikes perfect for all fitness levels.</p>
+            </div>
+
+            <!-- MOUNT RWENZORI -->
+            <div class="mountain-card reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Mount Rwenzori" />
+                    <span class="mountain-badge">Mountains of the Moon</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">The Crown Jewel</span>
+                    <h3>Mount Rwenzori</h3>
+                    <p class="subtitle">"The Mountains of the Moon"</p>
+                    <p>Rising majestically on Uganda's western border with the DRC, the Rwenzori Mountains are Africa's most legendary mountain range. Named by ancient geographer Ptolemy as the source of the Nile, these "Mountains of the Moon" feature glaciers, snowfields, and Africa's third-highest peak — Margherita Peak at 5,109 meters.</p>
+                    <p>The multi-day Central Circuit and Kilembe Trails take you through five distinct vegetation zones, from tropical rainforest to alpine tundra, with breathtaking views of glacial lakes, waterfalls, and unique giant flora like the groundsels and lobelias found nowhere else on Earth.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">5,109m</div>
+                            <div class="label">Peak Height</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">7-10</div>
+                            <div class="label">Days Trek</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Expert</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Glaciers</span>
+                        <span class="highlight-tag">UNESCO Site</span>
+                        <span class="highlight-tag">Giant Lobelias</span>
+                        <span class="highlight-tag">Alpine Lakes</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- MOUNT ELGON -->
+            <div class="mountain-card reverse reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Mount Elgon" />
+                    <span class="mountain-badge">Ancient Volcano</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">East Africa's Oldest Volcano</span>
+                    <h3>Mount Elgon</h3>
+                    <p class="subtitle">"The Mountain That Births the Sun"</p>
+                    <p>Mount Elgon is an extinct volcano that once stood taller than Kilimanjaro before centuries of erosion shaped it into its current form. Straddling the Uganda-Kenya border, this massive mountain features Africa's largest volcanic caldera — 40km in diameter — and the spectacular Siwa, Wanale, and Khauka caves.</p>
+                    <p>The Sasa and Piswa trails offer 4-5 day treks through bamboo forests, moorlands, and giant heather zones, culminating at Wagagai Peak (4,321m). Along the way, hikers encounter black-and-white colobus monkeys, over 300 bird species, and ancient cave paintings.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">4,321m</div>
+                            <div class="label">Wagagai Peak</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">4-5</div>
+                            <div class="label">Days Trek</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Moderate</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Volcanic Caldera</span>
+                        <span class="highlight-tag">Hot Springs</span>
+                        <span class="highlight-tag">Cave Paintings</span>
+                        <span class="highlight-tag">Colobus Monkeys</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- MOUNT SABYINYO -->
+            <div class="mountain-card reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=800&q=80" alt="Mount Sabyinyo" />
+                    <span class="mountain-badge">Gorilla's Teeth</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">The Virunga Range</span>
+                    <h3>Mount Sabyinyo</h3>
+                    <p class="subtitle">"The Old Man's Teeth"</p>
+                    <p>Named for its jagged peaks that resemble the teeth of an old man, Mount Sabyinyo (3,669m) is the oldest of the Virunga volcanoes and the only peak where Uganda, Rwanda, and the DRC meet at the summit. This challenging day hike takes you through bamboo forests and alpine meadows to a tri-point border marker.</p>
+                    <p>The trail is famous for its steep sections with ladders and ropes, making it an exciting adventure for fit hikers. Along the way, you may spot golden monkeys, forest elephants, and enjoy panoramic views of Lake Kivu and the surrounding Virunga volcanoes.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">3,669m</div>
+                            <div class="label">Summit Height</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">1</div>
+                            <div class="label">Day Hike</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Challenging</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Tri-Point Summit</span>
+                        <span class="highlight-tag">Golden Monkeys</span>
+                        <span class="highlight-tag">Bamboo Forest</span>
+                        <span class="highlight-tag">Day Hike</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- MOUNT MUHAVURA -->
+            <div class="mountain-card reverse reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80" alt="Mount Muhavura" />
+                    <span class="mountain-badge">The Guide</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">The Tallest Virunga Peak</span>
+                    <h3>Mount Muhavura</h3>
+                    <p class="subtitle">"The Guide" — Visible from Miles Away</p>
+                    <p>At 4,127 meters, Mount Muhavura is the highest and most distinct of the Virunga volcanoes in Uganda. Its conical shape makes it visible from great distances, serving as a natural landmark for travelers. The name means "The Guide" in the local language, as it has guided generations of locals and visitors alike.</p>
+                    <p>The hike to the summit is a challenging 1-2 day trek that rewards hikers with panoramic views of all the Virunga volcanoes, Lake Edward, and even the Rwenzori Mountains on clear days. The summit crater lake is a breathtaking sight.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">4,127m</div>
+                            <div class="label">Peak Height</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">1-2</div>
+                            <div class="label">Days Trek</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Challenging</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Crater Lake</span>
+                        <span class="highlight-tag">Panoramic Views</span>
+                        <span class="highlight-tag">Virunga Range</span>
+                        <span class="highlight-tag">Volcanic Rock</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- MOUNT MOROTO -->
+            <div class="mountain-card reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Mount Moroto" />
+                    <span class="mountain-badge">The Hidden Gem</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">Northeastern Uganda</span>
+                    <h3>Mount Moroto</h3>
+                    <p class="subtitle">"The Remote Wilderness Experience"</p>
+                    <p>Standing at 3,083 meters in the remote Karamoja region of northeastern Uganda, Mount Moroto is one of Africa's least-explored hiking destinations. This isolated mountain offers a completely different experience from the popular Virunga and Rwenzori ranges, with semi-arid landscapes, unique wildlife, and authentic cultural encounters with the Karamojong people.</p>
+                    <p>The trek takes you through dry montane forest, rocky outcrops, and cliffs home to rare bird species. It's a true adventure for those seeking off-the-beaten-path experiences and cultural immersion.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">3,083m</div>
+                            <div class="label">Peak Height</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">2-3</div>
+                            <div class="label">Days Trek</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Moderate</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Off-the-Beaten-Path</span>
+                        <span class="highlight-tag">Karamojong Culture</span>
+                        <span class="highlight-tag">Rare Birds</span>
+                        <span class="highlight-tag">Semi-Arid Landscape</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- MOUNT MGAHINGA -->
+            <div class="mountain-card reverse reveal">
+                <div class="mountain-image">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Mount Mgahinga" />
+                    <span class="mountain-badge">Where Gold Meets Silverback</span>
+                </div>
+                <div class="mountain-content">
+                    <span class="eyebrow">The Golden Monkey Home</span>
+                    <h3>Mount Mgahinga</h3>
+                    <p class="subtitle">"The Smallest but Mightiest Virunga"</p>
+                    <p>Mount Mgahinga (3,474m) is the smallest of the eight Virunga volcanoes but packs a powerful punch in terms of biodiversity and cultural significance. Part of Mgahinga Gorilla National Park, this mountain is home to both endangered mountain gorillas and the rare golden monkey.</p>
+                    <p>The day hike to the summit takes you through dense bamboo forests and alpine moorlands to a crater lake at the peak. It's an excellent option for those combining gorilla trekking with a challenging but rewarding day hike.</p>
+                    <div class="mountain-stats">
+                        <div class="mountain-stat">
+                            <div class="value">3,474m</div>
+                            <div class="label">Summit Height</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">1</div>
+                            <div class="label">Day Hike</div>
+                        </div>
+                        <div class="mountain-stat">
+                            <div class="value">Moderate</div>
+                            <div class="label">Difficulty</div>
+                        </div>
+                    </div>
+                    <div class="mountain-highlights">
+                        <span class="highlight-tag">Golden Monkeys</span>
+                        <span class="highlight-tag">Gorilla Habitat</span>
+                        <span class="highlight-tag">Crater Lake</span>
+                        <span class="highlight-tag">Bamboo Forest</span>
+                    </div>
+                    <a href="contact.html" class="btn-mountain">Book This Trek <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         DIFFICULTY LEVELS SECTION
+    ======================================== -->
+    <section class="hiking-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Choose Your Challenge</span>
+                <h2>Hiking Difficulty Levels</h2>
+                <p>Whether you're a beginner looking for a scenic walk or an experienced mountaineer seeking technical challenges, we have the perfect hike for you.</p>
+            </div>
+            <div class="difficulty-grid">
+                <div class="difficulty-card reveal">
+                    <div class="difficulty-icon"><i class="fas fa-hiking"></i></div>
+                    <h3>Beginner Friendly</h3>
+                    <span class="duration">1-2 Days</span>
+                    <p>Perfect for first-time hikers and families. Scenic trails with moderate elevation gains and well-maintained paths.</p>
+                    <ul>
+                        <li>Mount Elgon Day Hike</li>
+                        <li>Nature Walks in Bwindi</li>
+                        <li>Lake Bunyonyi Trails</li>
+                        <li>Bigodi Wetland Walk</li>
+                    </ul>
+                </div>
+                <div class="difficulty-card moderate reveal">
+                    <div class="difficulty-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>Moderate Challenge</h3>
+                    <span class="duration">2-5 Days</span>
+                    <p>For active hikers with some experience. Longer treks with significant elevation changes and varied terrain.</p>
+                    <ul>
+                        <li>Mount Elgon Summit (4-5 days)</li>
+                        <li>Mount Mgahinga (1 day)</li>
+                        <li>Mount Moroto (2-3 days)</li>
+                        <li>Virunga Nature Trails</li>
+                    </ul>
+                </div>
+                <div class="difficulty-card challenging reveal">
+                    <div class="difficulty-icon"><i class="fas fa-flag"></i></div>
+                    <h3>Expert Expedition</h3>
+                    <span class="duration">7-10 Days</span>
+                    <p>For experienced mountaineers. Technical climbs, high altitudes, and multi-day expeditions requiring proper gear.</p>
+                    <ul>
+                        <li>Rwenzori Margherita Peak</li>
+                        <li>Mount Sabyinyo Summit</li>
+                        <li>Mount Muhavura (1-2 days)</li>
+                        <li>Rwenzori Central Circuit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PACKING ESSENTIALS SECTION
+    ======================================== -->
+    <section class="hiking-section alt-bg">
+        <div class="container">
+            <div class="packing-grid">
+                <div class="packing-image-wrap reveal-left">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Hiker with backpack" />
+                </div>
+                <div class="reveal-right">
+                    <div class="section-header" style="text-align:left; margin:0 0 40px;">
+                        <span class="eyebrow">Be Prepared</span>
+                        <h2 style="font-size:2.2rem;">Packing Essentials</h2>
+                        <p style="margin-top:15px;">Pack smart for your Uganda hiking adventure. Here's what you need to bring for a safe and comfortable trek.</p>
+                    </div>
+                    <div class="packing-list">
+                        <div class="packing-item">
+                            <i class="fas fa-shoe-prints"></i>
+                            <span>Sturdy Hiking Boots</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-tshirt"></i>
+                            <span>Waterproof Jacket</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-hat-cowboy"></i>
+                            <span>Sun Hat & Sunglasses</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-sun"></i>
+                            <span>Sunscreen SPF 50+</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-bottle-water"></i>
+                            <span>Water Bottle (2L+)</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-flashlight"></i>
+                            <span>Headlamp/Torch</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-socks"></i>
+                            <span>Warm Layers</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-backpack"></i>
+                            <span>Daypack (30-40L)</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-apple-whole"></i>
+                            <span>Energy Snacks</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-camera"></i>
+                            <span>Camera & Binoculars</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-kit-medical"></i>
+                            <span>First Aid Kit</span>
+                        </div>
+                        <div class="packing-item">
+                            <i class="fas fa-person-walking-with-cane"></i>
+                            <span>Trekking Poles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         GALLERY SECTION
+    ======================================== -->
+    <section class="hiking-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Trail Moments</span>
+                <h2>Hiking Gallery</h2>
+                <p>Glimpses of unforgettable moments from our hiking expeditions across Uganda's majestic mountains.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Mountain summit view" />
+                    <div class="gallery-caption">
+                        <h4>Summit Views</h4>
+                        <p>Rwenzori Mountains</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=800&q=80" alt="Hiker on trail" />
+                    <div class="gallery-caption">
+                        <h4>Trail Adventures</h4>
+                        <p>Mount Elgon</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80" alt="Mountain lake" />
+                    <div class="gallery-caption">
+                        <h4>Alpine Lakes</h4>
+                        <p>Virunga Range</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80" alt="Misty mountain" />
+                    <div class="gallery-caption">
+                        <h4>Misty Peaks</h4>
+                        <p>Mount Sabyinyo</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Hiker with backpack" />
+                    <div class="gallery-caption">
+                        <h4>On the Trail</h4>
+                        <p>Mount Muhavura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TESTIMONIALS SECTION
+    ======================================== -->
+    <section class="hiking-section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Hiker Stories</span>
+                <h2>What Our Hikers Say</h2>
+                <p>Real experiences from adventurers who have conquered Uganda's peaks with Gari Trips.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Trekking the Rwenzori with Gari Trips was the adventure of a lifetime. Our guides were incredibly knowledgeable, and the support team made sure we were comfortable every step of the way. Standing on Margherita Peak was pure magic!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Michael Thompson</strong>
+                            <span>UK • Rwenzori Trek</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Mount Elgon exceeded all my expectations. The bamboo forests, the caves, the caldera — it was like walking through another world. Gari Trips organized everything perfectly, from permits to porters. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Sarah Anderson</strong>
+                            <span>USA • Mount Elgon Trek</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I hiked Mount Sabyinyo as a day trip and it was absolutely thrilling! The steep sections with ropes made it feel like a real adventure. Our guide was patient and encouraging. The views from the tri-point border were breathtaking!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>David Chen</strong>
+                            <span>Canada • Mount Sabyinyo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA SECTION
+    ======================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <div class="tagline">Your Summit Awaits</div>
+                <h2>Ready to Conquer Uganda's Mountains?</h2>
+                <p>Whether you're dreaming of standing on the glaciated peaks of the Rwenzori or exploring the ancient caldera of Mount Elgon, our expert guides are ready to lead you to the top. Book your hiking adventure today!</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta primary">
+                        <i class="fas fa-mountain"></i> Book a Hike
+                    </a>
+                    <a href="contact.html" class="btn-cta secondary">
+                        <i class="fas fa-envelope"></i> Get a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- footer section start -->
+<footer>
+    <div class="footerDouble">
+        <div class="footerContainer">
+            <div class="footerColumns">
+                <div class="footerLogo">
+                    <a href="index.html"><img src="./assets/images/gari-trips-logo-green.png" alt="Footer Logo"></a>
+                </div>
+                <p>Welcome to Gari Trips Uganda your premier gateway to authentic East African safari adventures.</p>
+                <div class="footerSocialIcons">
+                    <ul>
+                        <li><a href="https://www.youtube.com/@GariTrips" target="_blank" rel="noopener noreferrer" title="YouTube"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a></li>
+                        <li><a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer" title="Facebook"><div class="icon"><i class="fa-brands fa-facebook-f"></i></div></a></li>
+                        <li><a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer" title="TikTok"><div class="icon"><i class="fa-brands fa-tiktok"></i></div></a></li>
+                        <li><a href="https://www.instagram.com/garitripsuganda" target="_blank" rel="noopener noreferrer" title="Instagram"><div class="icon"><i class="fa-brands fa-instagram"></i></div></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerColumns">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><span>About us</span></a></li>
+                    <li><a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                    <li><a href="hiking.html"><span>Hiking Adventures</span></a></li>
+                    <li><a href="blogs.html"><span>Travel Blog</span></a></li>
+                    <li><a href="contact.html"><span>Contact us</span></a></li>
+                    <li><a href="#"><span>Kampala City Tours</span></a></li>
+                </ul>
+            </div>
+            <div class="footerColumns">
+                <h3>Gari Trips offers;</h3>
+                <ul class="footerColText">
+                    <li class="colorWhite"><a href="#">⦁ Gorilla trekking </a></li>
+                    <li class="colorYellow"><a href="#">⦁ Mountain Hiking </a></li>
+                    <li class="colorWhite"><a href="#">⦁ Bird Watching </a></li>
+                    <li class="colorYellow"><a href="#">⦁ Car hire services</a></li>
+                    <li class="colorWhite"><a href="#">⦁ Community Engagements</a></li>
+                    <li class="colorYellow"><a href="#">⦁ Bike Safaris</a></li>
+                </ul>
+            </div>
+            <div class="footerColumns">
+                <h3>Contact</h3>
+                <ul>
+                    <li><span>+256 704 018 220 / +256 772392152</span></li>
+                    <li><span>info@garitripsuganda.com</span></li>
+                    <li><span>Gari Trips House - Kansanga kiwafu</span></li>
+                    <li><span>opposite Boston International school.</span></li>
+                </ul>
+                <form class="footerForm">
+                    <div class="inputContainer">
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footerContent">
+        <ul>
+            <li>Copyright © 2026 Gari Trips Uganda. All rights reserved.</li>
+        </ul>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/256704018220" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<!-- SINGLE STANDARD HAMBURGER SCRIPT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+
+        if (!hamburger || !sidebar) {
+            console.error("Hamburger or sidebar not found!");
+            return;
+        }
+
+        hamburger.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+</script>
+
+<!-- GOOGLE TRANSLATE SCRIPT -->
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,de,nl',
+                autoDisplay: false
+            },
+            'google_translate_element');
+    }
+
+    function translateLanguage(lang){
+        var select = document.querySelector(".goog-te-combo");
+        if(select){
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+        }
+    }
+</script>
+
+<!-- SCROLL REVEAL ANIMATION -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

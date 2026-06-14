@@ -1,10 +1,2046 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rhino Tracking in Uganda | Ziwa Rhino Sanctuary | Gari Trips Uganda</title>
+
+    <meta name="description" content="Experience unforgettable rhino tracking on foot at Ziwa Rhino Sanctuary in Uganda. Learn about conservation, meet Southern White Rhinos, and support wildlife recovery." />
+    <meta name="keywords" content="Rhino tracking Uganda, Ziwa Rhino Sanctuary, Uganda wildlife, Rhino Fund Uganda, African rhino conservation" />
+    <meta name="author" content="Gari Trips Uganda" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/images/gari-trips-logo-brown.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========================================
+           GLOBAL RESET & BASE STYLES
+        ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2f6f3e;
+            --dark-green: #1a4d28;
+            --light-green: #4a9d5e;
+            --accent-green: #7bc67e;
+            --safari-brown: #8b5e3c;
+            --dark-brown: #5c3d2e;
+            --light-brown: #c49a6c;
+            --cream: #fdf8f0;
+            --warm-white: #fffef9;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --gold: #d4a853;
+            --nav-footer-bg: rgba(183, 202, 185, 0.4);
+            --shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background: var(--warm-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+           HEADER & NAVIGATION
+        ======================================== */
+        header {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        .headAgriosFirst {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--dark-green);
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: rgba(47, 111, 62, 0.15);
+            transition: var(--transition);
+            user-select: none;
+            line-height: 1;
+        }
+
+        .hamburger:hover {
+            background: rgba(47, 111, 62, 0.3);
+            transform: scale(1.05);
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(180deg, var(--dark-green) 0%, var(--primary-green) 100%);
+            z-index: 9999;
+            transition: left 0.4s ease;
+            padding: 30px 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0,0,0,0.2);
+        }
+
+        .sidebar.active {
+            left: 0;
+            display: block;
+        }
+
+        .sidebar ul {
+            margin-top: 20px;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 5px;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            padding: 12px 15px;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .logo a {
+            display: inline-block;
+        }
+
+        .logo svg {
+            max-width: 170px;
+            height: auto;
+        }
+
+        .socialIcons ul {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .socialIcons .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .socialIcons .icon:hover {
+            background: var(--safari-brown);
+            transform: translateY(-3px);
+        }
+
+        .navBoxes {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navBox, .navBox3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .iconText p {
+            font-size: 12px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .iconText h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-green);
+            margin: 0;
+        }
+
+        .headAgriosSecond {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 0;
+            border-top: 1px solid rgba(47, 111, 62, 0.1);
+        }
+
+        .navItems ul {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navItems ul li a {
+            display: block;
+            padding: 15px 25px;
+            color: var(--dark-green);
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navItems ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .navItems ul li a:hover::after,
+        .navItems ul li a.active::after {
+            width: 60%;
+        }
+
+        .navItems ul li a:hover {
+            background: rgba(47, 111, 62, 0.08);
+            color: var(--primary-green);
+        }
+
+        .navItems ul li a.active {
+            background: rgba(47, 111, 62, 0.12);
+            color: var(--primary-green);
+        }
+
+        /* ========================================
+           LANGUAGE SWITCHER
+        ======================================== */
+        .language-switcher {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            z-index: 99999;
+        }
+
+        #langBtn {
+            background: var(--primary-green);
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        #langBtn:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .language-dropdown {
+            display: none;
+            background: #fff;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 5px;
+            min-width: 150px;
+        }
+
+        .language-dropdown a {
+            display: block;
+            padding: 12px 18px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            transition: var(--transition);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .language-dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .language-dropdown a:hover {
+            background: var(--cream);
+            color: var(--primary-green);
+            padding-left: 22px;
+        }
+
+        .language-switcher:hover .language-dropdown {
+            display: block;
+        }
+
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+
+        #google_translate_element {
+            display: none;
+        }
+
+        /* ========================================
+           RHINO TRACKING - HERO SECTION
+        ======================================== */
+        .rhino-hero {
+            position: relative;
+            height: 75vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 77, 40, 0.85) 0%, rgba(92, 61, 46, 0.75) 100%),
+            url('./assets/images/gari-trips-visitors-11.jpg') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .rhino-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+        }
+
+        .rhino-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            max-width: 850px;
+            padding: 0 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .rhino-hero .tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 8px 22px;
+            border: 1px solid rgba(212, 168, 83, 0.4);
+            border-radius: 30px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .rhino-hero h1 {
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+            line-height: 1.1;
+        }
+
+        .rhino-hero h1 span {
+            color: var(--gold);
+            display: block;
+            font-style: italic;
+        }
+
+        .rhino-hero p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .rhino-hero .breadcrumb {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .rhino-hero .breadcrumb a {
+            color: var(--gold);
+        }
+
+        .rhino-hero .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========================================
+           SECTION COMMON STYLES
+        ======================================== */
+        .rhino-section {
+            padding: 90px 0;
+        }
+
+        .rhino-section.alt-bg {
+            background: linear-gradient(135deg, var(--cream) 0%, #f5efe6 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header .eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--safari-brown);
+            margin-bottom: 12px;
+            padding: 6px 18px;
+            background: rgba(139, 94, 60, 0.1);
+            border-radius: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2.6rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 4px;
+            background: var(--gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           INTRO / HISTORY SECTION
+        ======================================== */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .history-image-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .history-image-wrap img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .history-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .history-image-wrap .stat-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: linear-gradient(135deg, var(--safari-brown) 0%, var(--dark-brown) 100%);
+            color: #fff;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-hover);
+            text-align: center;
+            border: 4px solid #fff;
+        }
+
+        .stat-badge .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-badge .label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .history-text .eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--safari-brown);
+            margin-bottom: 12px;
+        }
+
+        .history-text h2 {
+            font-size: 2.4rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .history-text h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .history-text p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .history-text .highlight-box {
+            background: linear-gradient(135deg, rgba(47, 111, 62, 0.08) 0%, rgba(212, 168, 83, 0.08) 100%);
+            border-left: 4px solid var(--gold);
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .history-text .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: var(--dark-green);
+            font-weight: 500;
+        }
+
+        /* ========================================
+           THE EXPERIENCE SECTION
+        ======================================== */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .experience-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .experience-card:nth-child(2) {
+            border-top-color: var(--gold);
+        }
+
+        .experience-card:nth-child(3) {
+            border-top-color: var(--safari-brown);
+        }
+
+        .exp-icon {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 28px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(47, 111, 62, 0.3);
+        }
+
+        .experience-card:nth-child(2) .exp-icon {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-brown) 100%);
+            box-shadow: 0 4px 15px rgba(212, 168, 83, 0.4);
+        }
+
+        .experience-card:nth-child(3) .exp-icon {
+            background: linear-gradient(135deg, var(--safari-brown) 0%, var(--dark-brown) 100%);
+            box-shadow: 0 4px 15px rgba(139, 94, 60, 0.4);
+        }
+
+        .experience-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-green);
+            margin-bottom: 12px;
+        }
+
+        .experience-card:nth-child(2) h3 { color: var(--safari-brown); }
+        .experience-card:nth-child(3) h3 { color: var(--dark-brown); }
+
+        .experience-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           ZIWA SANCTUARY SPOTLIGHT
+        ======================================== */
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .spotlight-content h2 {
+            font-size: 2.4rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .spotlight-content h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            margin-top: 12px;
+            border-radius: 2px;
+        }
+
+        .spotlight-content p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .spotlight-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .spotlight-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: var(--cream);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .spotlight-feature:hover {
+            background: #fff;
+            box-shadow: var(--shadow);
+            transform: translateX(5px);
+        }
+
+        .spotlight-feature i {
+            color: var(--primary-green);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .spotlight-feature span {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .spotlight-image-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .spotlight-image-wrap img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .spotlight-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ========================================
+           FAQ SECTION
+        ======================================== */
+        .faq-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .faq-image-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            position: sticky;
+            top: 100px;
+        }
+
+        .faq-image-wrap img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .faq-image-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .faq-image-wrap .faq-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            color: #fff;
+        }
+
+        .faq-overlay h4 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .faq-overlay p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .accordion {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: var(--transition);
+        }
+
+        .accordion:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .accordion__header {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .accordion__header:hover {
+            background: var(--cream);
+        }
+
+        .accordion__question {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 0;
+            flex: 1;
+        }
+
+        .accordion__icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: var(--transition);
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .accordion.active .accordion__icon {
+            background: var(--safari-brown);
+            transform: rotate(45deg);
+        }
+
+        .accordion__content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .accordion.active .accordion__content {
+            max-height: 300px;
+            padding: 0 25px 20px;
+        }
+
+        .accordion__answer {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* ========================================
+           TESTIMONIALS SECTION
+        ======================================== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 35px 30px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.2;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-top: 18px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+        }
+
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-info strong {
+            display: block;
+            font-size: 14px;
+            color: var(--dark-green);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .testimonial-info span {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           CTA SECTION
+        ======================================== */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(26, 77, 40, 0.9) 0%, rgba(92, 61, 46, 0.85) 100%),
+            url('https://images.unsplash.com/photo-1547970810-dc1eac37d174?w=1600&q=80') center/cover no-repeat;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .cta-content {
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content .tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .cta-content h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta {
+            padding: 16px 38px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-cta.primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--light-brown) 100%);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(212, 168, 83, 0.4);
+        }
+
+        .btn-cta.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(212, 168, 83, 0.6);
+        }
+
+        .btn-cta.secondary {
+            background: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btn-cta.secondary:hover {
+            background: #fff;
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+        footer {
+            background: var(--nav-footer-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-dark);
+            padding-top: 60px;
+            border-top: 1px solid rgba(47, 111, 62, 0.15);
+        }
+
+        .footerContainer {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+
+        .footerColumns h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footerColumns h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 2px;
+        }
+
+        .footerLogo img {
+            max-width: 180px;
+            margin-bottom: 15px;
+            filter: none;
+        }
+
+        .footerColumns p {
+            color: var(--text-dark);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.85;
+        }
+
+        .footerSocialIcons ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footerSocialIcons .icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footerSocialIcons .icon:hover {
+            background: var(--safari-brown);
+            transform: translateY(-3px);
+        }
+
+        .footerColumns ul li {
+            margin-bottom: 10px;
+        }
+
+        .footerColumns ul li a,
+        .footerColumns ul li span {
+            color: var(--text-dark);
+            font-size: 14px;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .footerColumns ul li a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+            opacity: 1;
+        }
+
+        .footerColText li.colorWhite a {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .footerColText li.colorWhite a:hover {
+            color: var(--primary-green);
+            opacity: 1;
+        }
+
+        .footerColText li.colorYellow a {
+            color: var(--safari-brown);
+            font-weight: 500;
+        }
+
+        .footerColText li.colorYellow a:hover {
+            color: var(--dark-brown);
+        }
+
+        .footerForm {
+            margin-top: 15px;
+        }
+
+        .footerForm input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(47, 111, 62, 0.3);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.6);
+            color: var(--text-dark);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .footerForm input::placeholder {
+            color: var(--text-light);
+        }
+
+        .footerForm input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            background: rgba(255,255,255,0.9);
+            box-shadow: 0 0 0 3px rgba(47, 111, 62, 0.1);
+        }
+
+        .footerContent {
+            border-top: 1px solid rgba(47, 111, 62, 0.15);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerContent ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footerContent ul li {
+            color: var(--text-dark);
+            font-size: 13px;
+            opacity: 0.75;
+        }
+
+        /* ========================================
+           WHATSAPP FLOATING BUTTON
+        ======================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            animation: bounce 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float img {
+            width: 32px;
+            height: 32px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* ========================================
+           SCROLL REVEAL ANIMATION
+        ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+        @media (max-width: 1024px) {
+            .experience-grid,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footerContainer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .navBoxes {
+                display: none;
+            }
+
+            .socialIcons {
+                display: none;
+            }
+
+            .headAgriosSecond {
+                display: none;
+            }
+
+            .rhino-hero {
+                height: 65vh;
+                min-height: 450px;
+            }
+
+            .rhino-hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .rhino-hero p {
+                font-size: 1rem;
+            }
+
+            .rhino-section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .history-grid,
+            .spotlight-grid,
+            .faq-wrap {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .history-image-wrap img,
+            .spotlight-image-wrap img,
+            .faq-image-wrap img {
+                height: 350px;
+            }
+
+            .faq-image-wrap {
+                position: static;
+            }
+
+            .experience-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .spotlight-features {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+
+            .footerContainer {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .language-switcher {
+                top: 80px;
+                right: 10px;
+            }
+
+            #langBtn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+
+            .history-image-wrap .stat-badge {
+                right: 15px;
+                bottom: -15px;
+                padding: 18px 22px;
+            }
+
+            .stat-badge .number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rhino-hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .rhino-hero .tagline {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .history-text h2,
+            .spotlight-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn-cta {
+                padding: 14px 28px;
+                font-size: 13px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .whatsapp-float img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+        .navItems ul li a {
+            padding: 15px 20px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- header section start  -->
+<header>
+    <nav>
+        <div class="container">
+            <div class="headAgriosFirst">
+                <!-- SINGLE STANDARD HAMBURGER BUTTON -->
+                <div class="hamburger" id="hamburger">☰</div>
+
+                <!-- Sidebar / Menu -->
+                <div class="sidebar" id="sidebar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="safari-packages.html">Safari Packages</a></li>
+                        <li><a href="rhino-tracking.html" class="active">Rhino Tracking</a></li>
+                        <li><a href="blogs.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- header logo start  -->
+                <div class="logo">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink"
+                             width="170"
+                             height="52"
+                             viewBox="0 0 170 52"
+                             fill="none">
+                            <rect width="170" height="51.5" fill="url(#pattern0_4138_999)" />
+                            <defs>
+                                <pattern id="pattern0_4138_999"
+                                         patternContentUnits="objectBoundingBox"
+                                         width="10"
+                                         height="6">
+                                    <use xlink:href="#image0_4138_999"
+                                         transform="scale(0.00294118 0.00970874)" />
+                                </pattern>
+                                <image id="image0_4138_999"
+                                       width="340"
+                                       height="103"
+                                       xlink:href="./assets/images/gari-trips-logo-green.png" />
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+                <!-- header logo end  -->
+
+                <!-- social icons start  -->
+                <div class="socialIcons">
+                    <ul>
+                        <li><a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-tiktok" title="TikTok"></i></div></a></li>
+                        <li><a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer"><div class="icon"><i class="fab fa-facebook" title="Facebook"></i></div></a></li>
+                        <li><a href="https://www.youtube.com/@GariTrips"><div class="icon"><i class="fab fa-youtube" title="YouTube"></i></div></a></li>
+                        <li><a href="https://www.instagram.com/garitripsuganda"><div class="icon"><i class="fab fa-instagram" title="Instagram"></i></div></a></li>
+                    </ul>
+                </div>
+                <!-- social icons end  -->
+
+                <!-- nav boxes start  -->
+                <div class="navBoxes">
+                    <div class="navBox">
+                        <div class="iconText">
+                            <p>Call anytime</p>
+                            <h3>+256 704 018 220</h3>
+                        </div>
+                    </div>
+                    <div class="navBox">
+                        <div class="iconText">
+                            <p>Send email</p>
+                            <h3>info@garitripsuganda.com</h3>
+                        </div>
+                    </div>
+                    <div class="navBox3">
+                        <div class="iconText">
+                            <p>Kansanga Kiwafu </p>
+                            <h3>(opp. Boston Int sch)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="headAgriosSecond">
+                <div class="navItems">
+                    <ul>
+                        <li><a href="index.html"><span>Home</span></a></li>
+                        <li><a href="about.html"><span>About</span></a></li>
+                        <li><a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                        <li><a href="rhino-tracking.html" class="active"><span>Rhino Tracking</span></a></li>
+                        <li><a href="blogs.html"><span>Blog</span></a></li>
+                        <li><a href="contact.html"><span>Contact</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- MULTILINGUAL DROPDOWN START -->
+        <div class="language-switcher">
+            <button id="langBtn"><i class="fas fa-globe"></i> Language</button>
+            <div class="language-dropdown">
+                <a href="#" onclick="translateLanguage('en')">English</a>
+                <a href="#" onclick="translateLanguage('fr')">French</a>
+                <a href="#" onclick="translateLanguage('de')">German</a>
+                <a href="#" onclick="translateLanguage('nl')">Dutch</a>
+            </div>
+        </div>
+        <div id="google_translate_element"></div>
+        <!-- MULTILINGUAL DROPDOWN END -->
+    </nav>
+</header>
+
+<main>
+    <!-- ========================================
+         HERO SECTION
+    ======================================== -->
+    <section class="rhino-hero">
+        <div class="rhino-hero-content">
+            <span class="tagline">Conservation in Action</span>
+            <h1>Rhino Tracking <span>in Uganda</span></h1>
+            <p>Walk alongside the giants. Experience the thrill of tracking endangered Southern White Rhinos on foot at the renowned Ziwa Rhino Sanctuary, a beacon of hope for Uganda's wildlife.</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp; / &nbsp; <span>Rhino Tracking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         HISTORY / INTRO SECTION
+    ======================================== -->
+    <section class="rhino-section">
+        <div class="container">
+            <div class="history-grid">
+                <div class="history-image-wrap reveal-left">
+                    <img src="./assets/images/gallery-8.jpg" alt="Rhino in the wild" />
+                    <div class="stat-badge">
+                        <div class="number">30+</div>
+                        <div class="label">Rhinos<br>Protected</div>
+                    </div>
+                </div>
+                <div class="history-text reveal-right">
+                    <span class="eyebrow">The Remarkable Return</span>
+                    <h2>Bringing the Rhino Back to Uganda</h2>
+                    <p>In the 1980s, rampant poaching drove the rhino population in Uganda to complete extinction in the wild. For decades, the iconic creature was absent from the Pearl of Africa's landscapes.</p>
+                    <p>However, a remarkable conservation story began in 2005 with the establishment of the Ziwa Rhino and Wildlife Ranch. Located in the Nakasongola district along the Kampala-Gulu highway, this 70-square-kilometer sanctuary was created with a singular, ambitious goal: to reintroduce rhinos to Uganda and eventually release them into protected national parks.</p>
+                    <div class="highlight-box">
+                        <p>"Today, thanks to the tireless efforts of Rhino Fund Uganda, Ziwa is home to over 30 Southern White Rhinos, making it the only place in the country where you can track these magnificent giants on foot."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         THE EXPERIENCE SECTION
+    ======================================== -->
+    <section class="rhino-section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">What to Expect</span>
+                <h2>The Tracking Experience</h2>
+                <p>Rhino tracking at Ziwa is a unique, intimate, and highly regulated experience designed for both your safety and the well-being of the animals.</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card reveal">
+                    <div class="exp-icon"><i class="fas fa-shoe-prints"></i></div>
+                    <h3>On-Foot Adventure</h3>
+                    <p>Unlike traditional vehicle-based game drives, rhino tracking is done entirely on foot. Accompanied by an experienced, armed ranger, you will quietly navigate the savannah and woodland trails to locate the rhinos.</p>
+                </div>
+                <div class="experience-card reveal">
+                    <div class="exp-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Duration & Timing</h3>
+                    <p>Treks typically last 1 to 2 hours, depending on the rhinos' location. The best times to track are early morning (7:00 AM) or late afternoon (4:00 PM) when the animals are most active and the light is perfect for photography.</p>
+                </div>
+                <div class="experience-card reveal">
+                    <div class="exp-icon"><i class="fas fa-users"></i></div>
+                    <h3>Small Groups</h3>
+                    <p>To minimize disturbance to the wildlife, tracking groups are strictly limited to a maximum of 6 people per ranger. This ensures an intimate, personalized, and low-impact encounter with the rhinos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ZIWA SANCTUARY SPOTLIGHT
+    ======================================== -->
+    <section class="rhino-section">
+        <div class="container">
+            <div class="spotlight-grid">
+                <div class="spotlight-content reveal-left">
+                    <span class="eyebrow" style="display:inline-block;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--safari-brown);margin-bottom:12px;">The Sanctuary</span>
+                    <h2>Ziwa Rhino & Wildlife Ranch</h2>
+                    <p>Spanning 70 square kilometers of diverse habitat, Ziwa is more than just a rhino sanctuary. It is a thriving ecosystem that supports a wide variety of birdlife, antelopes, baboons, and reptiles.</p>
+                    <p>The sanctuary operates as a non-profit initiative under the guidance of Rhino Fund Uganda. Every tracking fee paid by visitors goes directly toward anti-poaching patrols, veterinary care, habitat management, and community development programs in the surrounding areas.</p>
+                    <div class="spotlight-features">
+                        <div class="spotlight-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>24/7 Armed Protection</span>
+                        </div>
+                        <div class="spotlight-feature">
+                            <i class="fas fa-baby"></i>
+                            <span>See Baby Rhinos</span>
+                        </div>
+                        <div class="spotlight-feature">
+                            <i class="fas fa-binoculars"></i>
+                            <span>Shoebill Stork Nearby</span>
+                        </div>
+                        <div class="spotlight-feature">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Community Support</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn-cta primary" style="margin-top: 10px;">
+                        <i class="fas fa-calendar-check"></i> Add to Your Itinerary
+                    </a>
+                </div>
+                <div class="spotlight-image-wrap reveal-right">
+                    <img src="./assets/images/gari-rhinos.JPG" alt="Ziwa Rhino Sanctuary landscape" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ SECTION
+    ======================================== -->
+    <section class="rhino-section alt-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Common Questions</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know before booking your rhino tracking adventure.</p>
+            </div>
+            <div class="faq-wrap">
+                <div class="faq-image-wrap reveal-left">
+                    <img src="./assets/images/certificate.jpg" alt="Safari guide with binoculars" />
+                    <div class="faq-overlay">
+                        <h4>Need More Info?</h4>
+                        <p>Our travel experts are ready to answer any specific questions about your trip.</p>
+                    </div>
+                </div>
+                <div class="accordion-container reveal-right">
+                    <!-- FAQ 1 -->
+                    <div class="accordion">
+                        <div class="accordion__header" tabindex="0" role="button" aria-expanded="false">
+                            <h3 class="accordion__question">Is rhino tracking safe?</h3>
+                            <span class="accordion__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true">
+                            <p class="accordion__answer">Yes, it is very safe. You will be accompanied by a trained, armed Uganda Wildlife Authority
+                                (UWA) ranger at all times. The rangers are experts in rhino behavior and will ensure you maintain a safe and
+                                respectful distance (typically 7-10 meters) from the animals.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion">
+                        <div class="accordion__header" tabindex="0" role="button" aria-expanded="false">
+                            <h3 class="accordion__question">Can children participate in rhino tracking?</h3>
+                            <span class="accordion__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true">
+                            <p class="accordion__answer">Yes! Rhino tracking is a fantastic family-friendly activity. Children aged 5 and above are
+                                welcome to participate. The terrain is relatively flat and easy to walk, making it accessible for most fitness levels.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion">
+                        <div class="accordion__header" tabindex="0" role="button" aria-expanded="false">
+                            <h3 class="accordion__question">What should I wear and bring?</h3>
+                            <span class="accordion__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true">
+                            <p class="accordion__answer">Wear comfortable, closed-toe walking shoes or light hiking boots, long trousers, and
+                                neutral-colored clothing (khaki, green, or brown). Bring a hat, sunscreen, insect repellent, a bottle of water,
+                                and your camera or binoculars.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion">
+                        <div class="accordion__header" tabindex="0" role="button" aria-expanded="false">
+                            <h3 class="accordion__question">How much does rhino tracking cost?</h3>
+                            <span class="accordion__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true">
+                            <p class="accordion__answer">The standard tracking fee is $50 per person for foreign non-residents, $40 for foreign
+                                residents, and 30,000 UGX for East African citizens. This fee includes the guided walk and contributes directly
+                                to rhino conservation efforts.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion">
+                        <div class="accordion__header" tabindex="0" role="button" aria-expanded="false">
+                            <h3 class="accordion__question">Can I combine this with other activities?</h3>
+                            <span class="accordion__icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="accordion__content" aria-hidden="true">
+                            <p class="accordion__answer">Absolutely. Ziwa is perfectly located on the main highway between Kampala and Murchison Falls
+                                National Park. Many of our clients combine rhino tracking with a Shoebill Stork canoe ride at nearby Limbach Swamp,
+                                making it an ideal stopover on a northern circuit safari.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         TESTIMONIALS SECTION
+    ======================================== -->
+    <section class="rhino-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">Guest Experiences</span>
+                <h2>What Our Travelers Say</h2>
+                <p>Hear from adventurers who have experienced the magic of rhino tracking with Gari Trips Uganda.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Tracking the rhinos on foot was the highlight of our Uganda trip. Our ranger was incredibly knowledgeable,
+                        and getting to see a mother and her calf up close was a deeply moving experience. Highly recommend!"</p>
+                    <!--<div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Mark Henderson</strong>
+                            <span>Australia • Family Safari</span>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"As a photographer, the lighting at 7 AM was perfect. The guides knew exactly how to position us for the best
+                        shots without stressing the animals. It's a brilliantly managed conservation project."</p>
+                   <!-- <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>Elena Rostova</strong>
+                            <span>Germany • Photography Tour</span>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"We added the Ziwa rhino tracking as a stopover on our way to Murchison Falls. It broke up the drive perfectly,
+                        and the kids absolutely loved it. Gari Trips organized the timing flawlessly."</p>
+                   <!-- <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Author" />
+                        </div>
+                        <div class="testimonial-info">
+                            <strong>David & Sarah O.</strong>
+                            <span>UK • Northern Circuit Safari</span>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CTA SECTION
+    ======================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <div class="tagline">Support Conservation, Create Memories</div>
+                <h2>Ready to Track the Giants?</h2>
+                <p>Add a rhino tracking experience to your Uganda itinerary. Whether as a standalone day trip or a stopover on your way to Murchison Falls, it's an adventure you won't forget.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-cta primary">
+                        <i class="fas fa-paper-plane"></i> Request a Quote
+                    </a>
+                    <a href="safari-packages.html" class="btn-cta secondary">
+                        <i class="fas fa-map-marked-alt"></i> View Safari Packages
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- footer section start -->
+<footer>
+    <div class="footerDouble">
+        <div class="footerContainer">
+            <div class="footerColumns">
+                <div class="footerLogo">
+                    <a href="index.html"><img src="./assets/images/gari-trips-logo-green.png" alt="Footer Logo"></a>
+                </div>
+                <p>Welcome to Gari Trips Uganda your premier gateway to authentic East African safari adventures.</p>
+                <div class="footerSocialIcons">
+                    <ul>
+                        <li><a href="https://www.youtube.com/@GariTrips" target="_blank" rel="noopener noreferrer" title="YouTube"><div class="icon"><i class="fa-brands fa-youtube"></i></div></a></li>
+                        <li><a href="https://www.facebook.com/garitrips" target="_blank" rel="noopener noreferrer" title="Facebook"><div class="icon"><i class="fa-brands fa-facebook-f"></i></div></a></li>
+                        <li><a href="https://www.tiktok.com/@garitripsuganda" target="_blank" rel="noopener noreferrer" title="TikTok"><div class="icon"><i class="fa-brands fa-tiktok"></i></div></a></li>
+                        <li><a href="https://www.instagram.com/garitripsuganda" target="_blank" rel="noopener noreferrer" title="Instagram"><div class="icon"><i class="fa-brands fa-instagram"></i></div></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerColumns">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html"><span>About us</span></a></li>
+                    <li><a href="safari-packages.html"><span>Safari Packages</span></a></li>
+                    <li><a href="rhino-tracking.html"><span>Rhino Tracking</span></a></li>
+                    <li><a href="blogs.html"><span>Travel Blog</span></a></li>
+                    <li><a href="contact.html"><span>Contact us</span></a></li>
+                    <li><a href="kampala-city-tours.html"><span>Kampala City Tours</span></a></li>
+                </ul>
+            </div>
+            <div class="footerColumns">
+                <h3>Gari Trips offers;</h3>
+                <ul class="footerColText">
+                    <li class="colorWhite"><a href="gorilla-trekking.html">⦁ Gorilla trekking </a></li>
+                    <li class="colorYellow"><a href="rhino-tracking.html">⦁ Rhino Tracking </a></li>
+                    <li class="colorWhite"><a href="bird-watching.html">⦁ Bird Watching </a></li>
+                    <li class="colorYellow"><a href="car-hire-services.html">⦁ Car hire services</a></li>
+                    <li class="colorWhite"><a href="cultural-engagements.html">⦁ Community Engagements</a></li>
+                    <li class="colorYellow"><a href="bike-safari.html">⦁ Bike Safaris</a></li>
+                </ul>
+            </div>
+            <div class="footerColumns">
+                <h3>Contact</h3>
+                <ul>
+                    <li><span>+256 704 018 220 / +256 772392152</span></li>
+                    <li><span>info@garitripsuganda.com</span></li>
+                    <li><span>Gari Trips House - Kansanga kiwafu</span></li>
+                    <li><span>opposite Boston International school.</span></li>
+                </ul>
+                <form class="footerForm">
+                    <div class="inputContainer">
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footerContent">
+        <ul>
+            <li>Copyright © 2026 Gari Trips Uganda. All rights reserved.</li>
+        </ul>
+    </div>
+</footer>
+<!-- footer section end -->
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/256704018220" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<!-- SINGLE STANDARD HAMBURGER SCRIPT -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+
+        if (!hamburger || !sidebar) {
+            console.error("Hamburger or sidebar not found!");
+            return;
+        }
+
+        hamburger.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener("click", function(e) {
+            if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+</script>
+
+<!-- GOOGLE TRANSLATE SCRIPT -->
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr,de,nl',
+                autoDisplay: false
+            },
+            'google_translate_element');
+    }
+
+    function translateLanguage(lang){
+        var select = document.querySelector(".goog-te-combo");
+        if(select){
+            select.value = lang;
+            select.dispatchEvent(new Event("change"));
+        }
+    }
+</script>
+
+<!-- FAQ ACCORDION SCRIPT -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            const header = accordion.querySelector('.accordion__header');
+
+            header.addEventListener('click', function() {
+                const isActive = accordion.classList.contains('active');
+
+                accordions.forEach(acc => acc.classList.remove('active'));
+
+                if (!isActive) {
+                    accordion.classList.add('active');
+                }
+            });
+
+            header.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    header.click();
+                }
+            });
+        });
+    });
+</script>
+
+<!-- SCROLL REVEAL ANIMATION -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+    });
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
