@@ -1965,54 +1965,40 @@
                     <h2>Call to Action</h2>
                     <h3>👉 Get your personalized safari itinerary within 24 hours</h3>
                     <div class="contactForm">
-                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <form name="contact"
+                              method="POST"
+                              action="/thank-you.html"
+                              data-netlify="true"
+                              netlify-honeypot="bot-field">
 
                             <input type="hidden" name="form-name" value="contact">
 
                             <p hidden>
-                                <label>Don't fill this out: <input name="bot-field"></label>
+                                <label>Don't fill this out:
+                                    <input name="bot-field">
+                                </label>
                             </p>
 
-                            <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Full Name"
-                                    required>
+                            <input type="text" name="name" placeholder="Full Name" required>
 
-                            <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email Address"
-                                    required>
+                            <input type="email" name="email" placeholder="Email Address" required>
 
-                            <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Phone Number (WhatsApp)"
-                                    required>
+                            <input type="tel" name="phone" placeholder="Phone Number (WhatsApp)" required>
 
-                            <input
-                                    type="text"
-                                    name="country"
-                                    placeholder="Country">
+                            <input type="text" name="country" placeholder="Country">
 
-                            <input
-                                    type="text"
-                                    name="tour_interest"
-                                    placeholder="Safari Package of Interest">
+                            <input type="text" name="tour_interest" placeholder="Safari Package of Interest">
 
-                            <textarea
-                                    name="message"
-                                    rows="6"
-                                    placeholder="Tell us about your safari plans..."
-                                    required></textarea>
+                            <textarea name="message"
+                                      rows="6"
+                                      placeholder="Tell us about your safari plans..."
+                                      required></textarea>
 
                             <button type="submit" class="contactButton">
                                 Request Safari Quote
                             </button>
 
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -2296,21 +2282,23 @@
                 <form class="footerForm"
                       name="newsletter"
                       method="POST"
+                      action="/thank-you.html"
                       data-netlify="true"
                       netlify-honeypot="bot-field">
 
                     <input type="hidden" name="form-name" value="newsletter">
 
                     <p hidden>
-                        <label>Don't fill this out: <input name="bot-field"></label>
+                        <label>Don't fill this out:
+                            <input name="bot-field">
+                        </label>
                     </p>
 
                     <div class="inputContainer">
-                        <input
-                                type="email"
-                                name="subscriber_email"
-                                placeholder="Enter your email"
-                                required>
+                        <input type="email"
+                               name="subscriber_email"
+                               placeholder="Enter your email"
+                               required>
                     </div>
 
                     <button type="submit">
@@ -2318,7 +2306,6 @@
                     </button>
 
                 </form>
-
             </div>
         </div>
     </div>
