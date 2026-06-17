@@ -1965,65 +1965,54 @@
                     <h2>Call to Action</h2>
                     <h3>👉 Get your personalized safari itinerary within 24 hours</h3>
                     <div class="contactForm">
-                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 
-                            <!-- Web3Forms Access Key -->
-                            <input type="hidden" name="access_key" value="3d93cd29-532a-4310-b5aa-6693089833">
-                            <input type="hidden" name="email" value="info@garitripsuganda.com">
+                            <input type="hidden" name="form-name" value="contact">
 
-                            <!-- Email Settings -->
-                            <input type="hidden" name="subject" value="New Safari Inquiry - Gari Trips Uganda">
-                            <input type="hidden" name="from_name" value="Gari Trips Uganda Website">
-                            <input type="hidden" name="redirect" value="https://garitripsuganda.com/thank-you.html">
+                            <p hidden>
+                                <label>Don't fill this out: <input name="bot-field"></label>
+                            </p>
 
-                            <!-- Spam Protection -->
-                            <input type="checkbox" name="botcheck" style="display:none;">
+                            <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Full Name"
+                                    required>
 
-                            <!-- Contact Information -->
-                            <input type="text"
-                                   id="name"
-                                   name="name"
-                                   placeholder="Full Name"
-                                   required>
+                            <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Email Address"
+                                    required>
 
-                            <input type="email"
-                                   id="email"
-                                   name="email"
-                                   placeholder="Email Address"
-                                   required>
+                            <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="Phone Number (WhatsApp)"
+                                    required>
 
-                            <input type="tel"
-                                   id="phone"
-                                   name="phone"
-                                   placeholder="Phone Number (WhatsApp)"
-                                   required>
+                            <input
+                                    type="text"
+                                    name="country"
+                                    placeholder="Country">
 
-                            <input type="text"
-                                   id="country"
-                                   name="country"
-                                   placeholder="Country">
+                            <input
+                                    type="text"
+                                    name="tour_interest"
+                                    placeholder="Safari Package of Interest">
 
-                            <input type="text"
-                                   id="tour"
-                                   name="tour_interest"
-                                   placeholder="Safari Package of Interest">
+                            <textarea
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell us about your safari plans..."
+                                    required></textarea>
 
-                            <textarea id="message"
-                                      name="message"
-                                      placeholder="Tell us about your safari plans..."
-                                      rows="6"
-                                      required></textarea>
+                            <button type="submit" class="contactButton">
+                                Request Safari Quote
+                            </button>
 
-                            <div class="button">
-                                <button class="contactButton" type="submit" id="submitBtn">
-                                    <span id="btnText"><i class="fas fa-paper-plane"></i> Request Safari Quote</span>
-                                    <span id="spinner" style="display:none;">⏳ Sending...</span>
-                                </button>
-                            </div>
-
-                            <!-- Status Messages -->
-                            <p id="form-status" style="margin-top:10px; font-size:14px;"></p>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -2304,11 +2293,32 @@
                     <li><span>Gari Trips House - Kansanga kiwafu</span></li>
                     <li><span>opposite Boston International school.</span></li>
                 </ul>
-                <form class="footerForm">
+                <form class="footerForm"
+                      name="newsletter"
+                      method="POST"
+                      data-netlify="true"
+                      netlify-honeypot="bot-field">
+
+                    <input type="hidden" name="form-name" value="newsletter">
+
+                    <p hidden>
+                        <label>Don't fill this out: <input name="bot-field"></label>
+                    </p>
+
                     <div class="inputContainer">
-                        <input type="email" placeholder="Enter your email" required>
+                        <input
+                                type="email"
+                                name="subscriber_email"
+                                placeholder="Enter your email"
+                                required>
                     </div>
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
                 </form>
+
             </div>
         </div>
     </div>
