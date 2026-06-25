@@ -921,7 +921,8 @@
        VIDEO SECTION
     ======================================== */
     .videoBackground {
-      background: linear-gradient(135deg, var(--dark-green) 0%, #1a3a25 100%);
+      background: linear-gradient(135deg, rgba(26, 77, 40, 0.15) 0%, rgba(92, 61, 46, 0.15) 100%),
+      url('./assets/images/gari- community-2.jpg') center/cover no-repeat;
       padding: 100px 0;
       position: relative;
       overflow: hidden;
@@ -977,53 +978,80 @@
 
     @keyframes pulse {
       0% {
-        box-shadow: 0 0 0 0 rgba(212, 168, 83, 0.7);
+        box-shadow: 0 0 0 0 rgba(212,168,83,0.7);
       }
       70% {
-        box-shadow: 0 0 0 20px rgba(212, 168, 83, 0);
+        box-shadow: 0 0 0 20px rgba(212,168,83,0);
       }
       100% {
-        box-shadow: 0 0 0 0 rgba(212, 168, 83, 0);
+        box-shadow: 0 0 0 0 rgba(212,168,83,0);
       }
     }
+
+    /* MODAL */
 
     #video-modal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.95);
       z-index: 99999;
       align-items: center;
       justify-content: center;
     }
 
+    /* LANDSCAPE VIDEO CONTAINER */
+
     .video-content {
       position: relative;
-      max-width: 800px;
       width: 90%;
+      max-width: 1000px;
+      height: 70vh;
+      overflow: hidden;
     }
+
+    /* VIDEO FILLS ENTIRE RECTANGLE */
 
     .video-content video {
       width: 100%;
-      border-radius: 12px;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
+
+    /* CLOSE BUTTON */
 
     #close-video {
       position: absolute;
-      top: -40px;
-      right: 0;
-      color: #fff;
-      font-size: 30px;
+      top: 15px;
+      right: 20px;
+      color: white;
+      font-size: 40px;
+      z-index: 999;
       cursor: pointer;
-      transition: var(--transition);
+      transition: 0.3s;
     }
 
     #close-video:hover {
       color: var(--gold);
       transform: rotate(90deg);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .video-content{
+        width:95%;
+        height:55vh;
+      }
+
+      .videoSectionText h3{
+        font-size:2rem;
+      }
+
     }
 
     /* ========================================
@@ -1877,6 +1905,150 @@
         padding:15px !important;
       }
     }
+    /* UWA Popup */
+    /* ========================= */
+    /* FLOATING BUTTON */
+    /* ========================= */
+
+    #uwaFloatingBtn{
+      position:fixed;
+      right:25px;
+      bottom:25px;
+      z-index:9998;
+
+      background:#0d6efd;
+      color:white;
+
+      border:none;
+      border-radius:50px;
+
+      padding:15px 22px;
+      font-size:15px;
+      font-weight:600;
+
+      cursor:pointer;
+
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+      transition:0.3s;
+    }
+
+    #uwaFloatingBtn:hover{
+      transform:translateY(-3px);
+    }
+
+    /* ========================= */
+    /* MODAL */
+    /* ========================= */
+
+    .uwa-modal{
+      display:none;
+
+      position:fixed;
+      z-index:9999;
+
+      left:0;
+      top:0;
+
+      width:100%;
+      height:100%;
+
+      overflow:auto;
+
+      background:rgba(0,0,0,0.75);
+    }
+
+    .uwa-modal-content{
+      background:#fff;
+
+      width:90%;
+      max-width:900px;
+
+      margin:40px auto;
+
+      border-radius:15px;
+
+      overflow:hidden;
+
+      animation:popupFade .4s ease;
+    }
+
+    @keyframes popupFade{
+      from{
+        opacity:0;
+        transform:translateY(-30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .uwa-header{
+      background:#f8f9fa;
+
+      display:flex;
+      align-items:center;
+
+      gap:20px;
+
+      padding:25px;
+    }
+
+    .uwa-header img{
+      width:90px;
+      height:auto;
+    }
+
+    .uwa-header h2{
+      margin:0;
+      color:#198754;
+    }
+
+    .uwa-header p{
+      margin:5px 0 0;
+    }
+
+    .uwa-body{
+      padding:25px;
+      max-height:70vh;
+      overflow-y:auto;
+    }
+
+    .uwa-body h3{
+      color:#198754;
+      margin-top:25px;
+    }
+
+    .uwa-table{
+      width:100%;
+      border-collapse:collapse;
+      margin:15px 0;
+    }
+
+    .uwa-table th,
+    .uwa-table td{
+      border:1px solid #ddd;
+      padding:10px;
+      text-align:center;
+    }
+
+    .uwa-table th{
+      background:#198754;
+      color:white;
+    }
+
+    .uwa-close{
+      float:right;
+
+      font-size:35px;
+      font-weight:bold;
+
+      margin:10px 20px;
+      cursor:pointer;
+    }
+
+
 
   </style>
 </head>
@@ -2038,6 +2210,7 @@
 
     <div id="google_translate_element"></div>
     <!-- MULTILINGUAL DROPDOWN END -->
+
   </nav>
 </header>
 
@@ -2712,7 +2885,7 @@
         with Uganda's trusted travel experts. <a href="kampala-city-tours.html" target="_blank" rel="noopener noreferrer">Explore luxury travel experiences</a>,
         personalized wildlife adventures for discerning travelers seeking rare, life changing encounters in Uganda and beyond.
         Gari Trips Uganda is a member of the <a href="https://www.ugandatourismassociation.org/" target="_blank" rel="noopener noreferrer">Uganda Tourism Association.</a>
-        and also listed in the <a href="http://www.tulipweb.com/" target="_blank" rel="noopener noreferrer">African safari travel directory.</a>
+        and also Regulated by the <a href="https://ugandawildlife.org//" target="_blank" rel="noopener noreferrer">Uganda Wildlife Authority.</a>
       </p>
       <div class="introbutton">
         <button onclick="location.href='about.html'" class="introbtn" type="button">Read More</button>
@@ -2723,9 +2896,12 @@
 
   <div class="container">
     <div class="newsGridContainer">
-      <h3>Explore our most popular safari packages designed to give you the best of Uganda's wildlife, landscapes,
-        and culture.<a href="https://www.safari.com/" target="_blank" rel="noopener noreferrer"> Alternatively find our safari
-          Packages on Safari.com</a></h3><br>
+      <h3>Explore our most popular safari packages designed to give you the best of
+        <a href="home-safari.html" target="_blank" rel="noopener noreferrer"> Uganda's wildlife</a>, landscapes,
+        <a href="cultural-engagements.html" target="_blank" rel="noopener noreferrer"> cultural Engagements </a>,
+        <a href="bird-watching.html" target="_blank" rel="noopener noreferrer"> Bird watching</a>,
+        <a href="hiking.html" target="_blank" rel="noopener noreferrer"> Hiking Experiences </a> and
+        <a href="bike-safari.html" target="_blank" rel="noopener noreferrer"> Bike safaris.</a></h3><br>
       <h3>Our Safari Packages</h3>
       <div class="newsGridBoxes">
         <!-- blogs box item first start  -->
@@ -2913,22 +3089,41 @@
         <br><div class="videoBackground">
         <div class="container">
           <div class="videoContainer">
+
             <!-- VIDEO SECTION -->
             <div class="videoSectionText" id="video-trigger">
-              <h3>Journey with <br>Gari Trips Uganda</h3>
+              <h3>Safari Adventure Experiences with <br>Gari Trips Uganda</h3>
+
               <div class="videoButton">
-                ▶</div>
-            </div>
-            <!-- VIDEO MODAL -->
-            <div id="video-modal">
-              <div class="video-content">
-                <span id="close-video">&times;</span>
-                <video id="video-player" controls>
-                  <source src="assets/images/gari-video-about-us.mp4" type="video/mp4">
-                  Your browser does not support video.
-                </video>
+                ▶
               </div>
             </div>
+
+            <!-- VIDEO MODAL -->
+            <div id="video-modal">
+
+              <div class="video-content">
+
+                <span id="close-video">&times;</span>
+
+                <video
+                        id="video-player"
+                        muted
+                        playsinline
+                        loop>
+
+                  <source
+                          src="assets/images/gari-video-about-us.mp4"
+                          type="video/mp4">
+
+                  Your browser does not support video.
+
+                </video>
+
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div><br>
@@ -3226,22 +3421,153 @@
              onmouseout="this.style.filter='grayscale(0%)'">
       </a>
 
-      <!-- Uganda Tourism Board -->
-      <a href="https://www.visituganda.com" target="_blank" rel="noopener noreferrer" title="Uganda Tourism Board">
-        <img src="./assets/images/uganda-tourism-board-logo.png" alt="Uganda Tourism Board"
+      <!-- Booking.com -->
+      <a href="https://www.booking.com/searchresults.html?aid=356980&label=gog235jc-10CAso6gFCEWdhcmktdHJpcHMtdWdhbmRhSDNYA2jqAYgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCxZD20QbAAgHSAiQ4YjQ2MzM4NC05N2VhLTRhODYtYTI4MS1kZTUzYjRjNmZlMDjYAgHgAgE&highlighted_hotels=16687195&redirected=1&city=-1728891&hlrd=user_sh&source=hotel&expand_sb=1&keep_landing=1&sid=ffbf252329d2d118d8e310152ea30898" target="_blank" rel="noopener noreferrer" title="Uganda Tourism Board">
+        <img src="./assets/images/booking-logo-1.png" alt="Uganda Tourism Board"
              style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
              onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
       </a>
 
-      <!-- Uganda Wildlife Authority -->
-      <a href="https://ugandawildlife.org" target="_blank" rel="noopener noreferrer" title="Uganda Wildlife Authority">
-        <img src="./assets/images/uganda-wildlife-logo.png" alt="Uganda Wildlife Authority"
+      <!-- FindTourGuide.com -->
+      <a href="https://www.findtourguide.com/operators/gari-trips-uganda-2260" target="_blank" rel="noopener noreferrer" title="Uganda Wildlife Authority">
+        <img src="./assets/images/find-tour-guide-logo-1.png" alt="Uganda Wildlife Authority"
              style="height: 40px; object-fit: contain; filter: grayscale(0%); transition: filter 0.2s;"
              onmouseover="this.style.filter='grayscale(20%)'" onmouseout="this.style.filter='grayscale(0%)'">
       </a>
 
     </div>
   </section>
+  </div>
+  <!-- ========================= -->
+  <!-- UWA ANNOUNCEMENT BUTTON -->
+  <!-- ========================= -->
+
+  <button id="uwaFloatingBtn">
+    <i class="fa fa-bullhorn"></i> UWA Tariff Update
+  </button>
+
+  <!-- UWA Modal -->
+  <div id="uwaModal" class="uwa-modal">
+
+    <div class="uwa-modal-content">
+
+      <span class="uwa-close">&times;</span>
+
+      <div class="uwa-header">
+        <img src="./assets/images/uganda-wildlife-logo.png"
+             alt="Uganda Wildlife Authority">
+
+        <div>
+          <h2>Uganda Wildlife Authority</h2>
+          <p>Official Permit & Tariff Update</p>
+        </div>
+      </div>
+
+      <div class="uwa-body">
+
+        <p><strong>Date:</strong> 26 February 2026</p>
+
+        <h3>Introduction of Low Season Gorilla & Chimpanzee Permit Rates</h3>
+
+        <p>
+          Uganda Wildlife Authority (UWA) has introduced discounted low season
+          permit rates applicable during the months of April, May and November.
+        </p>
+
+        <table class="uwa-table">
+          <thead>
+          <tr>
+            <th>Activity</th>
+            <th>FNR (USD)</th>
+            <th>FR (USD)</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>Gorilla Tracking</td>
+            <td>$600</td>
+            <td>$500</td>
+          </tr>
+
+          <tr>
+            <td>Chimpanzee Tracking</td>
+            <td>$200</td>
+            <td>$150</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p>
+          These rates take immediate effect and are intended to stimulate travel
+          during the low season while maintaining Uganda's exceptional primate
+          tracking experience.
+        </p>
+
+        <h3>Important Notice</h3>
+
+        <p>
+          Effective 1 March 2026, the current 7-day reservation window for
+          permits has been suspended.
+        </p>
+
+        <p>
+          Going forward, permits will only be secured upon full payment at the
+          time of booking.
+        </p>
+
+        <h3>Revised Tariffs Effective 1 January 2027</h3>
+
+        <table class="uwa-table">
+          <thead>
+          <tr>
+            <th>Activity</th>
+            <th>FNR</th>
+            <th>FR</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td>Gorilla Tracking</td>
+            <td>$800</td>
+            <td>$700</td>
+          </tr>
+
+          <tr>
+            <td>Gorilla Habituation</td>
+            <td>$1,800</td>
+            <td>$1,600</td>
+          </tr>
+
+          <tr>
+            <td>Chimpanzee Tracking (Kibale)</td>
+            <td>$300</td>
+            <td>$200</td>
+          </tr>
+
+          <tr>
+            <td>Chimpanzee Habituation</td>
+            <td>$400</td>
+            <td>$300</td>
+          </tr>
+
+          <tr>
+            <td>Experiential Lion Tracking</td>
+            <td>$500</td>
+            <td>$300</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p>
+          These changes are part of UWA's continued commitment to sustainable
+          conservation financing and improved visitor experiences.
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
 </main>
@@ -3475,31 +3801,65 @@
   setInterval(changeSlide,5000);
 
 </script>
+<!--JS for video -->
 <script>
+
   const trigger2 = document.getElementById("video-trigger");
   const modal2 = document.getElementById("video-modal");
   const closeBtn2 = document.getElementById("close-video");
   const player = document.getElementById("video-player");
 
+  /* OPEN VIDEO */
+
   trigger2.addEventListener("click", () => {
+
     modal2.style.display = "flex";
+
+    player.currentTime = 0;
+
     player.play();
+
   });
+
+  /* CLOSE VIDEO */
 
   closeBtn2.addEventListener("click", () => {
+
     modal2.style.display = "none";
+
     player.pause();
+
     player.currentTime = 0;
+
   });
 
-  window.addEventListener("click", (e)=>{
-    if(e.target===modal2){
-      modal2.style.display="none";
+  /* CLICK OUTSIDE TO CLOSE */
+
+  window.addEventListener("click", (e) => {
+
+    if (e.target === modal2) {
+
+      modal2.style.display = "none";
+
       player.pause();
-      player.currentTime=0;
+
+      player.currentTime = 0;
     }
+
   });
+
+  /* AUTO REPLAY SAFETY */
+
+  player.addEventListener("ended", () => {
+
+    player.currentTime = 0;
+
+    player.play();
+
+  });
+
 </script>
+<!--end of JS of video -->
 
 <script type="text/javascript"
         src="https://grwapi.net/widget.min.js"
@@ -3589,28 +3949,26 @@
   });
 </script>
 
-<!-- SCROLL REVEAL ANIMATION -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const reveals = document.querySelectorAll('.newsGridBoxItem, .benefitsTextsBox, .accordion');
 
-    reveals.forEach(el => el.classList.add('reveal'));
+  const uwaModal = document.getElementById("uwaModal");
+  const uwaBtn = document.getElementById("uwaFloatingBtn");
+  const uwaClose = document.querySelector(".uwa-close");
 
-    function revealOnScroll() {
-      reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const elementVisible = 150;
+  uwaBtn.onclick = function() {
+    uwaModal.style.display = "block";
+  }
 
-        if (elementTop < windowHeight - elementVisible) {
-          el.classList.add('visible');
-        }
-      });
+  uwaClose.onclick = function() {
+    uwaModal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == uwaModal) {
+      uwaModal.style.display = "none";
     }
+  }
 
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Initial check
-  });
 </script>
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
