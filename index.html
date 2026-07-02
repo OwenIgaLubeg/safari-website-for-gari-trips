@@ -401,32 +401,36 @@
     }
 
     .slide:nth-child(1) {
-      background-image: url('./assets/images/gari-1.JPG');
+      background-image: url('./assets/images/gari-gorilla-2.JPG');
+
      /* background-color: var(--dark-green);*/
     }
 
     .slide:nth-child(2) {
-      background-image: url('./assets/images/gari-2.JPG');
+      background-image: url('./assets/images/gari-1.JPG');
+
      /* background-color: var(--safari-brown);*/
     }
 
     .slide:nth-child(3) {
-      background-image: url('./assets/images/gari-3.JPG');
+      background-image: url('./assets/images/gari-2.JPG');
+
      /* background-color: var(--dark-brown);*/
     }
 
     .slide:nth-child(4) {
-      background-image: url('./assets/images/gari-kobs.JPG');
+      background-image: url('./assets/images/gari-3.JPG');
+
      /* background-color: #2d5a3f;*/
     }
 
     .slide:nth-child(5) {
-      background-image: url('./assets/images/gari-gorilla-2.JPG');
+      background-image: url('./assets/images/gari-trips-hot-spring-banner-1.jpg');
       /*background-color: #4a6741;*/
     }
 
     .slide:nth-child(6) {
-      background-image: url('./assets/images/gari-car-5.JPG');
+      background-image: url('./assets/images/gari-trips-beach-house-banner.jpg');
      /* background-color: #3d6b4f;*/
     }
 
@@ -2047,6 +2051,168 @@
       margin:10px 20px;
       cursor:pointer;
     }
+    /*=====================================
+    BEST EAST AFRICA ADVENTURE SAFARIS
+======================================*/
+
+    .bestSafariSection{
+      width:100%;
+      padding:90px 0;
+      background:#f8f9fa;
+    }
+
+    .bestSafariTitle{
+      text-align:center;
+      font-size:42px;
+      font-weight:700;
+      color:#0d4d2d;
+      margin-bottom:60px;
+    }
+
+    .bestSafariGrid{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    .safariCard{
+
+      width:250px;
+      height:420px;
+
+      position:relative;
+      overflow:hidden;
+
+      border-radius:16px;
+
+      text-decoration:none;
+
+      box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+      transition:.45s;
+
+    }
+
+    .safariCard img{
+
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:.5s;
+
+    }
+
+    .safariOverlay{
+
+      position:absolute;
+
+      left:0;
+      right:0;
+      bottom:0;
+
+      padding:25px;
+
+      background:linear-gradient(
+              transparent,
+              rgba(0,0,0,.92)
+      );
+
+      color:#fff;
+
+    }
+
+    .safariOverlay h3{
+
+      font-size:26px;
+
+      margin-bottom:10px;
+
+      font-weight:700;
+
+    }
+
+    .safariOverlay p{
+
+      font-size:15px;
+
+      line-height:1.6;
+
+    }
+
+    .safariCard:hover{
+
+      transform:translateY(-12px);
+
+      box-shadow:0 25px 45px rgba(0,0,0,.25);
+
+    }
+
+    .safariCard:hover img{
+
+      transform:scale(1.12);
+
+    }
+
+    /*====================
+    TABLETS
+    ====================*/
+
+    @media(max-width:992px){
+
+      .bestSafariGrid{
+
+        gap:25px;
+
+      }
+
+      .bestSafariTitle{
+
+        font-size:34px;
+
+      }
+
+    }
+
+    /*====================
+    MOBILE
+    ====================*/
+
+    @media(max-width:768px){
+
+      .bestSafariSection{
+
+        padding:70px 20px;
+
+      }
+
+      .bestSafariTitle{
+
+        font-size:28px;
+
+        margin-bottom:40px;
+
+      }
+
+      .bestSafariGrid{
+
+        flex-direction:column;
+
+      }
+
+      .safariCard{
+
+        width:100%;
+        max-width:340px;
+
+        height:450px;
+
+      }
+
+    }
 
 
 
@@ -3274,103 +3440,6 @@
 
                 </form>
 
-               <!--<script>
-                  const form = document.getElementById("contact-form");
-                  const status = document.getElementById("form-status");
-                  const btnText = document.getElementById("btnText");
-                  const spinner = document.getElementById("spinner");
-
-                  form.addEventListener("submit", async function(e) {
-                    e.preventDefault();
-
-                    btnText.style.display = "none";
-                    spinner.style.display = "inline";
-
-                    const formData = new FormData(form);
-
-                    try {
-
-                      const response = await fetch(form.action, {
-                        method: "POST",
-                        body: formData
-                      });
-
-                      const result = await response.json();
-
-                      if (result.success) {
-
-                        status.innerHTML =
-                                "✅ Thank you! Your safari inquiry has been sent successfully. We will contact you shortly.";
-
-                        status.style.color = "green";
-
-                        form.reset();
-
-                      } else {
-
-                        status.innerHTML =
-                                "❌ Failed to send your inquiry. Please try again.";
-
-                        status.style.color = "red";
-                      }
-
-                    } catch (error) {
-
-                      status.innerHTML =
-                              "⚠️ Network error. Please try again later.";
-
-                      status.style.color = "orange";
-                    }
-
-                    btnText.style.display = "inline";
-                    spinner.style.display = "none";
-                  });
-                </script>
-
-              </div>
-
-              <script>
-                const form2 = document.getElementById("contact-form");
-                const status2 = document.getElementById("form-status");
-                const btnText2 = document.getElementById("btnText");
-                const spinner2 = document.getElementById("spinner");
-
-                form2.addEventListener("submit", async function(e) {
-                  e.preventDefault();
-
-                  // Show loading spinner
-                  btnText2.style.display = "none";
-                  spinner2.style.display = "inline";
-
-                  const formData = new FormData(form2);
-
-                  try {
-                    const response = await fetch(form2.action, {
-                      method: "POST",
-                      body: formData
-                    });
-
-                    const result = await response.json();
-
-                    if (result.success) {
-                      status2.innerHTML = "✅ Message sent successfully!";
-                      status2.style.color = "green";
-                      form2.reset();
-                    } else {
-                      status2.innerHTML = "❌ Failed to send message. Try again.";
-                      status2.style.color = "red";
-                    }
-
-                  } catch (error) {
-                    status2.innerHTML = "⚠️ Network error. Please try again later.";
-                    status2.style.color = "orange";
-                  }
-
-                  // Reset button
-                  btnText2.style.display = "inline";
-                  spinner2.style.display = "none";
-                });
-              </script>-->
             </div>
           </div>
           <!-- contact form container end  -->
@@ -3378,6 +3447,75 @@
       </div>
     </div>
   </div>
+
+
+    <!-- ==========================
+       BEST EAST AFRICA SAFARIS
+  =========================== -->
+
+    <section class="bestSafariSection">
+
+      <div class="container">
+
+        <h1 class="bestSafariTitle">
+          Best East-Africa Adventure Safaris.
+        </h1>
+
+        <div class="bestSafariGrid">
+
+          <!-- Card 1 -->
+          <a href="contact.html" class="safariCard">
+
+            <img src="./assets/images/Gorilla%20-trekking.jpg" alt="Gorilla Trekking Safari">
+
+            <div class="safariOverlay">
+              <h3>Gorilla Trekking</h3>
+              <p>Experience Uganda's unforgettable mountain gorillas.</p>
+            </div>
+
+          </a>
+
+          <!-- Card 2 -->
+          <a href="contact.html" class="safariCard">
+
+            <img src="./assets/images/BIRDING.jpg" alt="Wildlife Safari">
+
+            <div class="safariOverlay">
+              <h3>Wildlife Safari</h3>
+              <p>Big Five adventures across East Africa.</p>
+            </div>
+
+          </a>
+
+          <!-- Card 3 -->
+          <a href="contact.html" class="safariCard">
+
+            <img src="./assets/images/CHIMPANZEE%20TRACKING.jpg" alt="Chimpanzee Tracking">
+
+            <div class="safariOverlay">
+              <h3>Chimpanzee Tracking</h3>
+              <p>Walk through tropical rainforests with expert guides.</p>
+            </div>
+
+          </a>
+
+          <!-- Card 4 -->
+          <a href="contact.html" class="safariCard">
+
+            <img src="./assets/images/ADVENTURE%20&%20CULTURE.jpg" alt="Luxury Safari">
+
+            <div class="safariOverlay">
+              <h3>Luxury Safari</h3>
+              <p>Premium lodges and unforgettable wildlife experiences.</p>
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
 
   <!-- Partners Section -->
   <section class="partners-section" style="padding: 30px 0; background-color: #f8f9fa; text-align: center;">
